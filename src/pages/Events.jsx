@@ -1,0 +1,159 @@
+import { Link } from 'react-router-dom';
+import { ArrowRight, Calendar, MapPin, CheckCircle2, Video, Headphones, Sparkles } from 'lucide-react';
+
+const eventTypes = [
+  {
+    icon: <Video />,
+    title: 'Monthly Deep-Dive Call',
+    desc: 'A live, virtual group call with Jenn — included with every membership.',
+    chip: 'Virtual',
+    color: 'magenta',
+  },
+  {
+    icon: <Headphones />,
+    title: 'Healing Soundbath',
+    desc: 'Drop in, exhale, and reset your nervous system with the sisterhood.',
+    chip: 'Virtual',
+    color: 'pink',
+  },
+  {
+    icon: <Sparkles />,
+    title: 'Launch Party',
+    desc: 'An intentional gathering to celebrate the community coming together.',
+    chip: 'In-Person',
+    color: 'gold',
+  },
+  {
+    icon: <MapPin />,
+    title: 'Southern Utah Summer Retreat',
+    desc: 'A transformational in-person experience. Extremely discounted for members.',
+    chip: 'In-Person',
+    color: 'orange',
+  },
+];
+
+const chipStyles = {
+  magenta: 'bg-magenta/10 text-magenta',
+  pink: 'bg-pink/10 text-pink',
+  gold: 'bg-gold/20 text-[#8a5a00]',
+  orange: 'bg-orange/10 text-orange',
+};
+
+const iconStyles = {
+  magenta: 'bg-magenta text-white',
+  pink: 'bg-pink text-white',
+  gold: 'bg-gold text-white',
+  orange: 'bg-orange text-white',
+};
+
+export default function Events() {
+  return (
+    <>
+      {/* HERO */}
+      <section className="relative pt-40 pb-20 md:pt-48 md:pb-24 px-6 bg-gradient-to-br from-pink via-orange to-gold overflow-hidden">
+        <div className="max-w-5xl mx-auto relative z-10 text-center">
+          <div className="inline-block px-4 py-1.5 bg-white/90 text-magenta rounded-full text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
+            Upcoming Events
+          </div>
+          <h1 className="text-5xl md:text-7xl font-display text-white leading-tight mb-6 drop-shadow-md">
+            Where the <i>sisterhood</i> rises together.
+          </h1>
+          <p className="text-lg md:text-xl text-white/95 font-medium max-w-2xl mx-auto">
+            Primarily online, with select in-person moments that bring the community together.
+          </p>
+        </div>
+      </section>
+
+      {/* PLACEHOLDER CALENDAR */}
+      <section className="relative py-24 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="bento-card bg-bg border-2 border-dashed border-pink/30 p-10 md:p-16 text-center mb-16">
+            <Calendar className="text-pink mx-auto mb-6" size={56} />
+            <h2 className="text-3xl md:text-5xl font-display text-gray-900 mb-4">
+              Full calendar <i className="text-pink">coming soon.</i>
+            </h2>
+            <p className="text-gray-600 text-lg md:text-xl font-medium max-w-2xl mx-auto mb-8">
+              The May and June event lineup is being finalized. Check back shortly — or reserve your spot now so you don’t miss a thing.
+            </p>
+            <Link
+              to="/#pricing"
+              className="inline-flex items-center gap-3 bg-magenta text-white py-4 px-8 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-pink transition-colors shadow-lg"
+            >
+              Reserve My Spot <ArrowRight size={18} />
+            </Link>
+          </div>
+
+          {/* WHAT TO EXPECT */}
+          <div className="mb-8">
+            <h2 className="text-3xl md:text-5xl font-display text-gray-900 mb-4 text-center">
+              What to <i className="text-orange">expect.</i>
+            </h2>
+            <p className="text-gray-600 text-lg md:text-xl font-medium text-center max-w-2xl mx-auto mb-10">
+              A taste of what’s included with your membership each month.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {eventTypes.map((e, i) => (
+              <div
+                key={i}
+                className="bento-card bg-white border-2 border-gray-100 p-8 flex flex-col gap-4"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className={`${iconStyles[e.color]} p-3 rounded-xl shrink-0`}>
+                    {e.icon}
+                  </div>
+                  <span
+                    className={`text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full ${chipStyles[e.color]}`}
+                  >
+                    {e.chip}
+                  </span>
+                </div>
+                <h3 className="font-display text-2xl text-gray-900">{e.title}</h3>
+                <p className="text-gray-600 font-medium leading-relaxed">{e.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* RETREAT CTA */}
+      <section className="relative py-24 px-6 bg-bg">
+        <div className="max-w-6xl mx-auto bento-card p-0 bg-magenta text-white relative overflow-hidden border-none min-h-[420px]">
+          <img
+            src="/assets/womens-retreat.png"
+            alt="Southern Utah retreat"
+            className="absolute inset-0 w-full h-full object-cover opacity-55"
+          />
+          <div className="absolute inset-0 bg-gradient-to-tr from-magenta/90 via-magenta/60 to-transparent" />
+          <div className="relative z-10 p-10 md:p-16 max-w-2xl">
+            <MapPin size={40} className="text-sun mb-6" />
+            <h2 className="text-4xl md:text-6xl font-display italic mb-4">
+              Summer Retreat
+            </h2>
+            <p className="text-sun text-sm font-bold uppercase tracking-widest mb-6">
+              Southern Utah
+            </p>
+            <p className="text-white/95 text-lg font-medium leading-relaxed mb-8">
+              An exclusive, transformative in-person experience. Unplug, recharge, and energize your vibe under the desert sun.
+            </p>
+            <ul className="space-y-2 mb-8">
+              <li className="flex items-center gap-3 font-bold">
+                <CheckCircle2 className="text-sun" size={20} /> Extremely discounted member rate
+              </li>
+              <li className="flex items-center gap-3 font-bold">
+                <CheckCircle2 className="text-sun" size={20} /> Limited spots available
+              </li>
+            </ul>
+            <Link
+              to="/#pricing"
+              className="inline-flex items-center gap-3 bg-sun text-magenta py-4 px-8 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors shadow-lg"
+            >
+              Secure My Member Rate <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
