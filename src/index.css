@@ -226,3 +226,79 @@ svg.lucide {
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
+
+/* Gentle floating idle */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.float-gentle {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+/* Breathing scale idle */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.95; }
+  50% { transform: scale(1.03); opacity: 1; }
+}
+.breathe {
+  animation: breathe 7s ease-in-out infinite;
+}
+
+/* Subtle image parallax effect on scroll hover containers */
+.zoom-slow {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .zoom-slow {
+  transform: scale(1.06);
+}
+
+/* Kenburns-style slow pan — good for hero photos */
+@keyframes kenburns {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.05) translate(-1%, -1%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+.kenburns {
+  animation: kenburns 22s ease-in-out infinite;
+}
+
+/* Button glow pulse */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 10px 30px rgba(226, 46, 100, 0.35); }
+  50% { box-shadow: 0 15px 40px rgba(226, 46, 100, 0.6); }
+}
+.glow-pulse {
+  animation: glow-pulse 3.5s ease-in-out infinite;
+}
+
+/* Shimmer sweep accent line */
+@keyframes shimmer-sweep {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(248, 162, 50, 0.7) 40%,
+    rgba(253, 224, 139, 0.95) 50%,
+    rgba(248, 162, 50, 0.7) 60%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-sweep 5s ease-in-out infinite;
+}
+
+/* Honor prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}

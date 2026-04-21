@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import Blob from './Blob.jsx';
 import GradientBarList from './GradientBarList.jsx';
+import Reveal from './Reveal.jsx';
 
 const itemsLeft = [
   { icon: <Video />, text: "Daily 'Lives for Vibes'", accent: 'sun' },
@@ -33,19 +34,23 @@ export default function Inclusions() {
       <Blob tone="pink" size="lg" className="-top-20 right-10" opacity={12} slow />
       <Blob tone="gold" size="md" className="bottom-40 -left-20" opacity={18} />
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-16">
+        <Reveal className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-display mb-6 text-gray-900 leading-tight">
             Everything inside <span className="font-serif italic text-pink font-semibold">your membership.</span>
           </h2>
           <p className="text-gray-500 text-lg md:text-xl font-medium max-w-2xl mx-auto">
             Tools for developing yourself, a community that roots for you, and little touches that remind you you’re not alone.
           </p>
-        </div>
+        </Reveal>
 
         {/* Gradient bar list - two stacked columns on desktop */}
         <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-12">
-          <GradientBarList items={itemsLeft} />
-          <GradientBarList items={itemsRight} />
+          <Reveal direction="right" delay={80}>
+            <GradientBarList items={itemsLeft} />
+          </Reveal>
+          <Reveal direction="left" delay={160}>
+            <GradientBarList items={itemsRight} />
+          </Reveal>
         </div>
 
         {/* Photo feature row: the room, the call */}

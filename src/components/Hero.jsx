@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import Reveal from './Reveal.jsx';
 
 export default function Hero() {
   return (
     <section className="relative z-10 pt-40 pb-24 md:pt-48 md:pb-40 px-6 overflow-hidden bg-sun">
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover kenburns"
           src="/assets/eyv-header-video.mp4"
           autoPlay
           loop
@@ -24,10 +25,10 @@ export default function Hero() {
       </div>
 
       <div className="max-w-5xl mx-auto flex flex-col items-center text-center relative z-10">
-        <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md text-white font-bold text-[11px] uppercase tracking-[0.3em] mb-8 border border-white/30 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
+        <Reveal direction="down" className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md text-white font-bold text-[11px] uppercase tracking-[0.3em] mb-8 border border-white/30 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
           <Sparkles size={14} strokeWidth={1.5} className="text-sun" />
           A Global Sisterhood Rising Together
-        </div>
+        </Reveal>
 
         <h1
           className="text-5xl md:text-[6.5rem] leading-[1.05] mb-8 max-w-5xl font-display font-medium text-white"
@@ -60,7 +61,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
           <a
             href="#pricing"
-            className="w-full sm:w-auto bg-magenta text-white py-5 px-10 rounded-full font-bold uppercase tracking-widest text-lg shadow-[0_10px_30px_rgba(183,21,86,0.5)] hover:shadow-[0_15px_40px_rgba(183,21,86,0.7)] transition-all hover:-translate-y-1 flex items-center justify-center gap-3"
+            className="w-full sm:w-auto bg-magenta text-white py-5 px-10 rounded-full font-bold uppercase tracking-widest text-lg glow-pulse hover:shadow-[0_15px_40px_rgba(183,21,86,0.75)] transition-all hover:-translate-y-1 flex items-center justify-center gap-3"
           >
             Reserve Your Spot <ArrowRight size={20} />
           </a>

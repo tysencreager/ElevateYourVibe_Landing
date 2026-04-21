@@ -8,7 +8,6 @@ import GlobalSisterhood from '../components/GlobalSisterhood.jsx';
 import AboutCondensed from '../components/AboutCondensed.jsx';
 import Inclusions from '../components/Inclusions.jsx';
 import EventsTeaser from '../components/EventsTeaser.jsx';
-import WelcomeKit from '../components/WelcomeKit.jsx';
 import Pricing from '../components/Pricing.jsx';
 
 export default function Home() {
@@ -32,7 +31,6 @@ export default function Home() {
       <AboutCondensed />
       <Inclusions />
       <EventsTeaser />
-      <WelcomeKit />
       <Pricing />
     </>
   );

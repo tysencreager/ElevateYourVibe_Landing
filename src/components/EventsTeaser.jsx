@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, MapPin } from 'lucide-react';
+import Reveal from './Reveal.jsx';
 
 export default function EventsTeaser() {
   return (
     <section id="events" className="relative z-10 py-28 bg-soft-dawn overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row gap-8 relative z-10">
-        <div className="w-full lg:w-1/2 bento-card p-10 md:p-14 glass border border-gold/20">
+        <Reveal direction="right" className="w-full lg:w-1/2 bento-card p-10 md:p-14 glass border border-gold/20">
           <h2 className="text-4xl md:text-5xl font-display mb-6 text-gray-900 leading-tight">
             Calls, gatherings &amp; <span className="font-serif italic text-pink font-semibold">moments to rise together.</span>
           </h2>
@@ -36,9 +37,9 @@ export default function EventsTeaser() {
           >
             See Upcoming Events <ArrowRight size={18} />
           </Link>
-        </div>
+        </Reveal>
 
-        <div className="w-full lg:w-1/2 bento-card p-0 bg-magenta text-white relative overflow-hidden group border-none min-h-[420px]">
+        <Reveal direction="left" delay={120} className="w-full lg:w-1/2 bento-card p-0 bg-magenta text-white relative overflow-hidden group border-none min-h-[420px]">
           <img
             src="/assets/womens-retreat.png"
             alt="Women's retreat in Southern Utah"
@@ -67,7 +68,7 @@ export default function EventsTeaser() {
               </p>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Blob from './Blob.jsx';
+import Reveal from './Reveal.jsx';
 
 export default function AboutCondensed() {
   return (
@@ -9,7 +10,7 @@ export default function AboutCondensed() {
       <Blob tone="magenta" size="lg" className="bottom-0 -left-32" opacity={20} />
       <div className="max-w-6xl mx-auto bento-card p-8 md:p-16 bg-white shadow-2xl relative border-none z-10">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center z-10 relative">
-          <div className="w-full md:w-5/12">
+          <Reveal direction="right" className="w-full md:w-5/12">
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl border-4 border-sun">
               <img
                 src="/assets/jenn-headshot.png"
@@ -20,8 +21,8 @@ export default function AboutCondensed() {
                 Meet Jenn
               </div>
             </div>
-          </div>
-          <div className="w-full md:w-7/12">
+          </Reveal>
+          <Reveal direction="left" delay={120} className="w-full md:w-7/12">
             <h2 className="text-3xl md:text-5xl font-display leading-tight text-gray-900 mb-8">
               “I want what’s introduced to <span className="font-serif italic text-orange font-semibold">speak to the soul.”</span>
             </h2>
@@ -44,7 +45,7 @@ export default function AboutCondensed() {
             >
               Read Jenn’s Full Story <ArrowRight size={18} />
             </Link>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

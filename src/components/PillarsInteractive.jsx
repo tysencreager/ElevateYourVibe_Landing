@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { pillars } from '../data/pillars.js';
 import Sunburst from './Sunburst.jsx';
+import Reveal from './Reveal.jsx';
 
 const gradientMap = {
   align:   { from: '#B71556', via: '#8A1249', to: '#3b0a24' },
@@ -14,18 +15,9 @@ const gradientMap = {
   shine:   { from: '#FDE08B', via: '#F8A232', to: '#E22E64' },
 };
 
-const AUTO_ADVANCE_MS = 6500;
-
 export default function PillarsInteractive() {
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
   const contentRef = useRef(null);
-
-  useEffect(() => {
-    if (paused) return;
-    const id = setInterval(() => setActive((a) => (a + 1) % pillars.length), AUTO_ADVANCE_MS);
-    return () => clearInterval(id);
-  }, [paused]);
 
   const pillar = pillars[active];
   const g = gradientMap[pillar.key];
@@ -51,18 +43,16 @@ export default function PillarsInteractive() {
     <section
       id="pillars"
       className="relative z-10 py-28 px-6 bg-soft-dawn overflow-hidden"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
     >
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-12">
+        <Reveal className="text-center mb-12">
           <h2 className="text-4xl md:text-6xl font-display mb-4 text-gray-900">
             Built on <span className="font-serif italic text-gradient font-semibold">7 Pillars.</span>
           </h2>
           <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto font-medium">
             Real change needs clarity. Tap a pillar to explore how each area supports the whole.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid md:grid-cols-[240px_1fr] gap-6 md:gap-10 items-stretch">
           {/* Tab list */}
@@ -122,7 +112,6 @@ export default function PillarsInteractive() {
             className="relative rounded-3xl overflow-hidden min-h-[440px] shadow-2xl transition-[background] duration-700 grain"
             style={{ background: bg }}
           >
-            {/* Decorative mandala */}
             <Sunburst
               className="absolute -right-24 -top-24 w-[520px] h-[520px] opacity-30"
               strokeColor="rgba(255, 255, 255, 0.5)"
@@ -132,28 +121,6 @@ export default function PillarsInteractive() {
               strokeColor="rgba(253, 224, 139, 0.6)"
               rays={16}
             />
-
-            {/* Progress ring */}
-            <div className="absolute top-6 right-6 z-10" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 48 48" className="-rotate-90">
-                <circle cx="24" cy="24" r="20" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="3" />
-                <circle
-                  key={`${active}-${paused}`}
-                  cx="24"
-                  cy="24"
-                  r="20"
-                  fill="none"
-                  stroke="rgba(253,224,139,0.95)"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeDasharray="125.66"
-                  strokeDashoffset="125.66"
-                  style={{
-                    animation: paused ? 'none' : `dash ${AUTO_ADVANCE_MS}ms linear forwards`,
-                  }}
-                />
-              </svg>
-            </div>
 
             <div
               ref={contentRef}
@@ -174,23 +141,18 @@ export default function PillarsInteractive() {
                   {pillar.long}
                 </p>
               </div>
-              <div className="mt-8 flex items-center justify-between gap-4">
-                <div className="flex gap-1.5" aria-hidden="true">
-                  {pillars.map((_, i) => (
-                    <button
-                      key={i}
-                      type="button"
-                      onClick={() => setActive(i)}
-                      className={`h-1.5 rounded-full transition-all ${
-                        i === active ? 'w-8 bg-sun' : 'w-1.5 bg-white/40 hover:bg-white/70'
-                      }`}
-                      aria-label={`Go to pillar ${i + 1}`}
-                    />
-                  ))}
-                </div>
-                <span className="text-xs uppercase tracking-widest text-white/60 font-bold hidden sm:block">
-                  {paused ? 'Paused' : 'Auto-rotating'}
-                </span>
+              <div className="mt-8 flex gap-1.5" aria-hidden="true">
+                {pillars.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => setActive(i)}
+                    className={`h-1.5 rounded-full transition-all ${
+                      i === active ? 'w-8 bg-sun' : 'w-1.5 bg-white/40 hover:bg-white/70'
+                    }`}
+                    aria-label={`Go to pillar ${i + 1}`}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -205,12 +167,6 @@ export default function PillarsInteractive() {
           </Link>
         </div>
       </div>
-
-      <style>{`
-        @keyframes dash {
-          to { stroke-dashoffset: 0; }
-        }
-      `}</style>
     </section>
   );
 }
