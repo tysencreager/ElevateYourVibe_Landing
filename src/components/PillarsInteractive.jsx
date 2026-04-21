@@ -56,11 +56,6 @@ export default function PillarsInteractive() {
     >
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-pink mb-5 inline-flex items-center gap-3">
-            <span className="section-numeral not-italic">02</span>
-            <span className="h-px w-8 bg-gold/60" />
-            The Framework
-          </p>
           <h2 className="text-4xl md:text-6xl font-display mb-4 text-gray-900">
             Built on <span className="font-serif italic text-gradient font-semibold">7 Pillars.</span>
           </h2>

@@ -33,12 +33,20 @@ export default function Hero() {
           className="text-5xl md:text-[6.5rem] leading-[1.05] mb-8 max-w-5xl font-display font-medium text-white"
           style={{
             textShadow:
-              '0 2px 8px rgba(0,0,0,0.45), 0 4px 24px rgba(60,10,30,0.55), 0 1px 2px rgba(0,0,0,0.35)',
+              '0 2px 8px rgba(0,0,0,0.5), 0 4px 24px rgba(60,10,30,0.6), 0 1px 2px rgba(0,0,0,0.4)',
           }}
         >
           Empower your energy.
-          <span className="block mt-3">
-            <span className="relative inline-block italic align-baseline px-4 md:px-6 py-1 md:py-2 rounded-2xl bg-gradient-to-br from-pink via-magenta to-[#6a0e33] shadow-[0_14px_40px_rgba(183,21,86,0.55)] text-white">
+          <span className="block mt-2 md:mt-3">
+            <span className="relative inline-block italic font-serif text-white"
+              style={{
+                backgroundImage:
+                  'linear-gradient(180deg, transparent 0%, transparent 58%, rgba(226,46,100,0.78) 58%, rgba(226,46,100,0.55) 100%)',
+                backgroundRepeat: 'no-repeat',
+                padding: '0 0.3em 0.08em',
+                borderRadius: '0.2em',
+              }}
+            >
               Transform your life.
             </span>
           </span>

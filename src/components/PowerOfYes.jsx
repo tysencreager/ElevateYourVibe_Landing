@@ -8,17 +8,10 @@ export default function PowerOfYes() {
       <Blob tone="gold" size="lg" className="top-1/3 -right-40" opacity={18} />
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="mb-14 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-pink mb-4 flex items-center gap-3">
-              <span className="section-numeral not-italic">01</span>
-              <span className="h-px w-8 bg-gold/60" />
-              The Shift
-            </p>
-            <h2 className="text-4xl md:text-6xl font-display text-gray-900 leading-tight">
-              What happens when you <br />
-              <span className="font-serif italic text-pink font-semibold">say YES to yourself:</span>
-            </h2>
-          </div>
+          <h2 className="text-4xl md:text-6xl font-display text-gray-900 leading-tight">
+            What happens when you <br />
+            <span className="font-serif italic text-pink font-semibold">say YES to yourself:</span>
+          </h2>
           <p className="text-gray-600 text-lg md:text-xl max-w-md font-medium leading-relaxed">
             Leave survival mode behind. This is everything you stand to gain when you finally prioritize your own energy.
           </p>

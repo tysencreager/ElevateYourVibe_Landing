@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Video,
   Heart,
@@ -12,20 +11,20 @@ import {
   ArrowRight,
 } from 'lucide-react';
 import Blob from './Blob.jsx';
+import GradientBarList from './GradientBarList.jsx';
 
-const items = [
-  { icon: <Video />, text: "Daily 'Lives for Vibes'", bg: 'bg-gradient-to-br from-pink to-magenta text-white' },
-  { icon: <Heart />, text: 'Cheerleader in your pocket', bg: 'bg-gradient-to-br from-sun to-gold/70 text-magenta' },
-  { icon: <Users />, text: 'Monthly Group Call', bg: 'bg-gradient-to-br from-magenta to-[#6a0e33] text-white' },
-  { icon: <MessageCircleHeart />, text: 'Private Facebook Community', bg: 'bg-gradient-to-br from-gold to-orange text-white' },
-  { icon: <Map />, text: 'The Energize Your Vibe Method + Roadmap', bg: 'bg-gradient-to-br from-orange to-pink text-white' },
-  { icon: <Headphones />, text: 'Podcasts, Meditations & Spotify Playlist', bg: 'bg-gradient-to-br from-pink via-orange to-gold text-white' },
-  { icon: <Sparkle />, text: 'Affirmations & Vibe Checks', bg: 'bg-gradient-to-br from-sun to-orange/60 text-magenta' },
-  {
-    icon: <Gift />,
-    text: 'Personalized Welcome Gift in the Mail',
-    bg: 'bg-animated-warm text-white',
-  },
+const itemsLeft = [
+  { icon: <Video />, text: "Daily 'Lives for Vibes'", accent: 'sun' },
+  { icon: <Heart />, text: 'Cheerleader in your pocket', accent: 'gold' },
+  { icon: <Users />, text: 'Monthly Group Call with Jenn', accent: 'orange' },
+  { icon: <MessageCircleHeart />, text: 'Private Facebook Community', accent: 'pink' },
+];
+
+const itemsRight = [
+  { icon: <Map />, text: 'The Energize Your Vibe Method + Roadmap', accent: 'sun' },
+  { icon: <Headphones />, text: 'Podcasts, Meditations & Spotify Playlist', accent: 'gold' },
+  { icon: <Sparkle />, text: 'Affirmations & Vibe Checks', accent: 'orange' },
+  { icon: <Gift />, text: 'Personalized Welcome Gift in the Mail', accent: 'pink' },
 ];
 
 export default function Inclusions() {
@@ -35,11 +34,6 @@ export default function Inclusions() {
       <Blob tone="gold" size="md" className="bottom-40 -left-20" opacity={18} />
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-pink mb-5 inline-flex items-center gap-3">
-            <span className="section-numeral not-italic">03</span>
-            <span className="h-px w-8 bg-gold/60" />
-            Inside
-          </p>
           <h2 className="text-4xl md:text-6xl font-display mb-6 text-gray-900 leading-tight">
             Everything inside <span className="font-serif italic text-pink font-semibold">your membership.</span>
           </h2>
@@ -48,22 +42,14 @@ export default function Inclusions() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-8">
-          {items.map((item, i) => (
-            <div
-              key={i}
-              className={`bento-card p-6 flex flex-col items-center justify-center text-center gap-4 aspect-square ${item.bg} border-none`}
-            >
-              <div className="bg-white/20 p-4 rounded-full backdrop-blur-sm transition-transform hover:scale-110 hover:rotate-6 duration-300">
-                {React.cloneElement(item.icon, { size: 32 })}
-              </div>
-              <span className="font-bold text-base md:text-lg leading-tight">{item.text}</span>
-            </div>
-          ))}
+        {/* Gradient bar list - two stacked columns on desktop */}
+        <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-12">
+          <GradientBarList items={itemsLeft} />
+          <GradientBarList items={itemsRight} />
         </div>
 
         {/* Photo feature row: the room, the call */}
-        <div className="grid md:grid-cols-5 gap-5 mb-8">
+        <div className="grid md:grid-cols-5 gap-5 mb-12">
           <div className="bento-card relative overflow-hidden md:col-span-3 min-h-[280px] border-none group">
             <img
               src="/assets/women-table.png"

@@ -38,11 +38,6 @@ export default function Pricing() {
       />
       <Blob tone="magenta" size="xl" className="bottom-0 -left-40" opacity={25} slow />
       <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
-        <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-sun mb-5 inline-flex items-center gap-3">
-          <span className="section-numeral not-italic text-sun">05</span>
-          <span className="h-px w-8 bg-sun/60" />
-          Membership
-        </p>
         <h2 className="text-4xl md:text-7xl font-display mb-6 text-white drop-shadow-md leading-tight">
           Reserve your spot <br className="hidden md:block" />
           <span className="font-serif italic text-sun">in the community.</span>

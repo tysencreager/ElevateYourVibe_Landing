@@ -56,11 +56,6 @@ export default function Events() {
         />
         <Blob tone="magenta" size="lg" className="-bottom-20 -left-20" opacity={25} slow />
         <div className="max-w-5xl mx-auto relative z-10 text-center">
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-white mb-5 inline-flex items-center gap-3">
-            <span className="section-numeral not-italic text-sun">01</span>
-            <span className="h-px w-8 bg-white/40" />
-            Upcoming Events
-          </p>
           <h1 className="text-5xl md:text-7xl font-display text-white leading-tight mb-6 drop-shadow-md">
             Where the <span className="font-serif italic text-sun">sisterhood</span> rises together.
           </h1>

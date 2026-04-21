@@ -43,19 +43,6 @@ h2.font-display {
   letter-spacing: 0.28em;
 }
 
-/* Section numeral (editorial magazine style) */
-.section-numeral {
-  font-family: 'Recoleta', serif;
-  font-style: italic;
-  color: var(--gold);
-}
-
-/* Thin gold hairline */
-.gold-hair {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(248,162,50,0.6), transparent);
-}
-
 /* Soft hover lift */
 .lift {
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
@@ -69,18 +56,6 @@ svg.lucide {
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-
-/* Scroll progress bar fixed at top */
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 2px;
-  z-index: 70;
-  background: linear-gradient(90deg, #B71556, #E22E64, #F26B38, #F8A232);
-  transform-origin: 0 0;
-  will-change: transform;
 }
 
 /* Link underline animation */

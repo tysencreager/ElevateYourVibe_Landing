@@ -20,11 +20,6 @@ export default function About() {
         <Blob tone="magenta" size="lg" className="-bottom-20 right-10" opacity={15} />
         <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2">
-            <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-magenta mb-5 inline-flex items-center gap-3">
-              <span className="section-numeral not-italic">01</span>
-              <span className="h-px w-8 bg-magenta/40" />
-              Meet Jenn
-            </p>
             <h1 className="text-5xl md:text-7xl font-display text-magenta leading-tight mb-6">
               The heart behind <span className="font-serif italic text-gradient font-semibold">Energize Your Vibe.</span>
             </h1>
@@ -301,34 +296,56 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5">
-            <div className="bento-card bg-sun/40 border-2 border-gold/30 p-8">
-              <p className="text-xs font-bold uppercase tracking-widest text-magenta mb-3">
-                Awareness
-              </p>
-              <h3 className="font-display text-2xl text-gray-900 mb-3">See it clearly.</h3>
-              <p className="text-gray-700 font-medium leading-relaxed">
-                Most people feel off but don’t know why. The pillars help you name it — so you can do something about it.
-              </p>
-            </div>
-            <div className="bento-card bg-pink/5 border-2 border-pink/20 p-8">
-              <p className="text-xs font-bold uppercase tracking-widest text-pink mb-3">
-                Balance
-              </p>
-              <h3 className="font-display text-2xl text-gray-900 mb-3">Regulate your nervous system.</h3>
-              <p className="text-gray-700 font-medium leading-relaxed">
-                When your pillars are supported, your body feels safer. That’s why you feel calmer, more focused, and more resilient.
-              </p>
-            </div>
-            <div className="bento-card bg-orange/5 border-2 border-orange/20 p-8">
-              <p className="text-xs font-bold uppercase tracking-widest text-orange mb-3">
-                Momentum
-              </p>
-              <h3 className="font-display text-2xl text-gray-900 mb-3">Support one, shift them all.</h3>
-              <p className="text-gray-700 font-medium leading-relaxed">
-                Poor sleep affects your mood. Relationship stress affects your decisions. Everything is connected — and the pillars move with you.
-              </p>
-            </div>
+          <div className="flex flex-col gap-4 md:gap-5">
+            {[
+              {
+                eyebrow: 'Awareness',
+                title: 'See it clearly.',
+                desc: 'Most people feel off but don’t know why. The pillars help you name it — so you can do something about it.',
+                gradient:
+                  'linear-gradient(90deg, rgba(253,224,139,0.95) 0%, rgba(248,162,50,0.9) 55%, rgba(242,107,56,0.85) 100%)',
+              },
+              {
+                eyebrow: 'Balance',
+                title: 'Regulate your nervous system.',
+                desc: 'When your pillars are supported, your body feels safer. That’s why you feel calmer, more focused, and more resilient.',
+                gradient:
+                  'linear-gradient(90deg, rgba(248,162,50,0.9) 0%, rgba(242,107,56,0.95) 55%, rgba(226,46,100,0.9) 100%)',
+              },
+              {
+                eyebrow: 'Momentum',
+                title: 'Support one, shift them all.',
+                desc: 'Poor sleep affects your mood. Relationship stress affects your decisions. Everything is connected — and the pillars move with you.',
+                gradient:
+                  'linear-gradient(90deg, rgba(242,107,56,0.92) 0%, rgba(226,46,100,0.95) 55%, rgba(183,21,86,0.9) 100%)',
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="relative rounded-2xl md:rounded-3xl p-6 md:p-8 text-white shadow-[0_12px_32px_-14px_rgba(226,46,100,0.35)] transition-transform duration-300 hover:-translate-y-0.5"
+                style={{
+                  background: item.gradient,
+                  WebkitMaskImage:
+                    'linear-gradient(90deg, transparent 0, black 2%, black 98%, transparent 100%)',
+                  maskImage:
+                    'linear-gradient(90deg, transparent 0, black 2%, black 98%, transparent 100%)',
+                }}
+              >
+                <div className="grid md:grid-cols-[auto_1fr] gap-x-8 gap-y-2 items-baseline">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-white/85">
+                    {item.eyebrow}
+                  </p>
+                  <div>
+                    <h3 className="font-display text-2xl md:text-3xl mb-2 leading-tight">
+                      {item.title}
+                    </h3>
+                    <p className="text-white/95 font-medium leading-relaxed text-base md:text-lg">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
 
           <div className="mt-14 text-center">
