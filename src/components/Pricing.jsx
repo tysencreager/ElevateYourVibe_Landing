@@ -52,7 +52,7 @@ export default function Pricing() {
 
           <div className="text-center mb-8 pt-6">
             <h3 className="text-2xl md:text-3xl font-display text-gray-900 mb-4">
-              EYV Membership
+              Energize Your Vibe Membership
             </h3>
             <div className="flex justify-center items-end gap-2">
               <span className="text-7xl md:text-8xl font-display text-pink leading-none">$88</span>

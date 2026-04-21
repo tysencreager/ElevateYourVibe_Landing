@@ -20,7 +20,11 @@ export default function Nav() {
 
   return (
     <>
-      <div className="fixed w-full z-50 top-6 px-4 pointer-events-none flex justify-center">
+      <div
+        className={`fixed w-full z-50 px-4 pointer-events-none flex justify-center transition-[top] duration-300 ${
+          scrolled ? 'top-3' : 'top-[54px] md:top-[60px]'
+        }`}
+      >
         <nav
           className={`pointer-events-auto transition-all duration-300 w-full max-w-5xl rounded-full border-2 ${
             scrolled

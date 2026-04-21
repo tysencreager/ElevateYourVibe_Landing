@@ -4,6 +4,7 @@ import Hero from '../components/Hero.jsx';
 import Marquee from '../components/Marquee.jsx';
 import PowerOfYes from '../components/PowerOfYes.jsx';
 import PillarsInteractive from '../components/PillarsInteractive.jsx';
+import GlobalSisterhood from '../components/GlobalSisterhood.jsx';
 import AboutCondensed from '../components/AboutCondensed.jsx';
 import Inclusions from '../components/Inclusions.jsx';
 import EventsTeaser from '../components/EventsTeaser.jsx';
@@ -26,6 +27,7 @@ export default function Home() {
       <Marquee />
       <PowerOfYes />
       <PillarsInteractive />
+      <GlobalSisterhood />
       <AboutCondensed />
       <Inclusions />
       <EventsTeaser />

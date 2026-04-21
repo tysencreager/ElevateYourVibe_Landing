@@ -17,7 +17,7 @@ const items = [
   { icon: <Heart />, text: 'Cheerleader in your pocket', bg: 'bg-gradient-to-br from-sun to-gold/70 text-magenta' },
   { icon: <Users />, text: 'Monthly Group Call', bg: 'bg-gradient-to-br from-magenta to-[#6a0e33] text-white' },
   { icon: <MessageCircleHeart />, text: 'Private Facebook Community', bg: 'bg-gradient-to-br from-gold to-orange text-white' },
-  { icon: <Map />, text: 'The EYV Method + Roadmap', bg: 'bg-gradient-to-br from-orange to-pink text-white' },
+  { icon: <Map />, text: 'The Energize Your Vibe Method + Roadmap', bg: 'bg-gradient-to-br from-orange to-pink text-white' },
   { icon: <Headphones />, text: 'Podcasts, Meditations & Spotify Playlist', bg: 'bg-gradient-to-br from-pink via-orange to-gold text-white' },
   { icon: <Sparkles />, text: 'Affirmations & Vibe Checks', bg: 'bg-gradient-to-br from-sun to-orange/60 text-magenta' },
   {
@@ -42,7 +42,7 @@ export default function Inclusions() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-8">
           {items.map((item, i) => (
             <div
               key={i}
@@ -54,6 +54,45 @@ export default function Inclusions() {
               <span className="font-bold text-base md:text-lg leading-tight">{item.text}</span>
             </div>
           ))}
+        </div>
+
+        {/* Photo feature row: the room, the call */}
+        <div className="grid md:grid-cols-5 gap-5 mb-8">
+          <div className="bento-card relative overflow-hidden md:col-span-3 min-h-[280px] border-none group">
+            <img
+              src="/assets/women-table.png"
+              alt="Women gathered around a table in a creative workspace"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-magenta/85 via-magenta/30 to-transparent" />
+            <div className="relative z-10 p-8 md:p-10 flex flex-col justify-end h-full min-h-[280px] text-white">
+              <Users className="text-sun mb-4" size={32} />
+              <h3 className="font-display text-3xl md:text-4xl mb-3 drop-shadow-md">
+                A room full of women rooting for you.
+              </h3>
+              <p className="text-white/95 font-medium text-base md:text-lg max-w-md drop-shadow">
+                Connection, creativity, and wellness — shared openly, without comparison.
+              </p>
+            </div>
+          </div>
+
+          <div className="bento-card relative overflow-hidden md:col-span-2 min-h-[280px] border-none group">
+            <img
+              src="/assets/sisterhood-zoom.png"
+              alt="Woman on a video call with the community"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-pink/85 via-pink/30 to-transparent" />
+            <div className="relative z-10 p-8 flex flex-col justify-end h-full min-h-[280px] text-white">
+              <Video className="text-sun mb-4" size={28} />
+              <h3 className="font-display text-2xl md:text-3xl mb-2 drop-shadow-md">
+                Live, together.
+              </h3>
+              <p className="text-white/95 font-medium drop-shadow">
+                Monthly calls + daily lives, wherever you are in the world.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-16">

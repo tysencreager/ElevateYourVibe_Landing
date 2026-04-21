@@ -10,6 +10,7 @@ const eventTypes = [
     desc: 'A live, virtual group call with Jenn — included with every membership.',
     chip: 'Virtual',
     color: 'magenta',
+    image: '/assets/sisterhood-zoom.png',
   },
   {
     icon: <Headphones />,
@@ -17,6 +18,7 @@ const eventTypes = [
     desc: 'Drop in, exhale, and reset your nervous system with the sisterhood.',
     chip: 'Virtual',
     color: 'pink',
+    image: '/assets/online-sisterhood.png',
   },
   {
     icon: <Sparkles />,
@@ -24,6 +26,7 @@ const eventTypes = [
     desc: 'An intentional gathering to celebrate the community coming together.',
     chip: 'In-Person',
     color: 'gold',
+    image: '/assets/women-boardwalk.png',
   },
   {
     icon: <MapPin />,
@@ -31,21 +34,15 @@ const eventTypes = [
     desc: 'A transformational in-person experience. Extremely discounted for members.',
     chip: 'In-Person',
     color: 'orange',
+    image: '/assets/womens-retreat.png',
   },
 ];
 
-const chipStyles = {
-  magenta: 'bg-magenta/10 text-magenta',
-  pink: 'bg-pink/10 text-pink',
-  gold: 'bg-gold/20 text-[#8a5a00]',
-  orange: 'bg-orange/10 text-orange',
-};
-
-const iconStyles = {
-  magenta: 'bg-magenta text-white',
-  pink: 'bg-pink text-white',
-  gold: 'bg-gold text-white',
-  orange: 'bg-orange text-white',
+const overlayStyles = {
+  magenta: 'bg-gradient-to-t from-magenta/90 via-magenta/50 to-transparent',
+  pink: 'bg-gradient-to-t from-pink/90 via-pink/50 to-transparent',
+  gold: 'bg-gradient-to-t from-[#8a5a00]/90 via-gold/50 to-transparent',
+  orange: 'bg-gradient-to-t from-orange/90 via-orange/50 to-transparent',
 };
 
 export default function Events() {
@@ -104,20 +101,28 @@ export default function Events() {
             {eventTypes.map((e, i) => (
               <div
                 key={i}
-                className="bento-card bg-white border-2 border-gray-100 p-8 flex flex-col gap-4"
+                className="bento-card relative overflow-hidden border-none min-h-[320px] group text-white"
               >
-                <div className="flex items-start justify-between gap-4">
-                  <div className={`${iconStyles[e.color]} p-3 rounded-xl shrink-0`}>
-                    {e.icon}
+                <img
+                  src={e.image}
+                  alt={e.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className={`absolute inset-0 ${overlayStyles[e.color]}`} />
+                <div className="relative z-10 p-8 flex flex-col justify-between h-full min-h-[320px]">
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="bg-white/20 backdrop-blur-sm p-3 rounded-xl shrink-0 border border-white/30">
+                      {e.icon}
+                    </div>
+                    <span className="text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full bg-white/90 text-gray-800">
+                      {e.chip}
+                    </span>
                   </div>
-                  <span
-                    className={`text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full ${chipStyles[e.color]}`}
-                  >
-                    {e.chip}
-                  </span>
+                  <div>
+                    <h3 className="font-display text-2xl md:text-3xl mb-2 drop-shadow-md">{e.title}</h3>
+                    <p className="text-white/95 font-medium leading-relaxed drop-shadow">{e.desc}</p>
+                  </div>
                 </div>
-                <h3 className="font-display text-2xl text-gray-900">{e.title}</h3>
-                <p className="text-gray-600 font-medium leading-relaxed">{e.desc}</p>
               </div>
             ))}
           </div>
