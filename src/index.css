@@ -1,0 +1,294 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --magenta: #B71556;
+  --pink: #E22E64;
+  --orange: #F26B38;
+  --gold: #F8A232;
+  --sun: #FDE08B;
+  --bg: #FAFAFA;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: #111111;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+}
+
+/* Editorial / display type - Recoleta only, untouched */
+.font-display {
+  font-family: 'Recoleta', Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+/* Tighter tracking on very large display type */
+.font-display.tracking-luxury,
+h1.font-display,
+h2.font-display {
+  letter-spacing: -0.02em;
+}
+
+/* Generous hero letter-spacing for the hero chip/eyebrows */
+.tracking-lux {
+  letter-spacing: 0.28em;
+}
+
+/* Soft hover lift */
+.lift {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+.lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Refine all lucide icons to thinner luxury stroke */
+svg.lucide {
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Link underline animation */
+.link-sheen {
+  position: relative;
+}
+.link-sheen::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s ease;
+}
+.link-sheen:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.bento-card {
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.bg-brand-gradient {
+  background: linear-gradient(135deg, var(--magenta), var(--pink), var(--orange));
+}
+
+.bg-warm-gradient {
+  background: linear-gradient(135deg, var(--gold), var(--orange), var(--pink));
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--magenta), var(--pink), var(--orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-video-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(253, 224, 139, 0.45) 0%,
+    rgba(248, 162, 50, 0.35) 40%,
+    rgba(226, 46, 100, 0.35) 100%
+  );
+}
+
+/* -- Animated conic gradient for hero / feature cards -- */
+@keyframes gradient-drift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-animated-warm {
+  background: linear-gradient(
+    130deg,
+    #FDE08B 0%,
+    #F8A232 25%,
+    #F26B38 50%,
+    #E22E64 75%,
+    #B71556 100%
+  );
+  background-size: 300% 300%;
+  animation: gradient-drift 18s ease infinite;
+}
+
+/* -- Soft section gradients -- */
+.bg-soft-dawn {
+  background: radial-gradient(ellipse at top left, rgba(253, 224, 139, 0.45), transparent 55%),
+    radial-gradient(ellipse at bottom right, rgba(226, 46, 100, 0.12), transparent 60%),
+    #FAFAFA;
+}
+
+.bg-soft-sunset {
+  background: radial-gradient(ellipse at 15% 20%, rgba(248, 162, 50, 0.35), transparent 55%),
+    radial-gradient(ellipse at 85% 80%, rgba(183, 21, 86, 0.2), transparent 60%),
+    #fff;
+}
+
+.bg-soft-ember {
+  background: linear-gradient(160deg, #fff 0%, #FDE08B33 45%, #F26B3820 100%);
+}
+
+.bg-soft-rose {
+  background: radial-gradient(ellipse at 80% 10%, rgba(226, 46, 100, 0.18), transparent 60%),
+    radial-gradient(ellipse at 10% 90%, rgba(248, 162, 50, 0.25), transparent 55%),
+    #FAFAFA;
+}
+
+/* -- Golden shimmer divider line -- */
+.shimmer-divider {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(248, 162, 50, 0.3) 20%,
+    rgba(253, 224, 139, 0.9) 50%,
+    rgba(248, 162, 50, 0.3) 80%,
+    transparent 100%
+  );
+}
+
+/* -- Drifting floating blob (used by Blob component) -- */
+@keyframes blob-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.08); }
+  66% { transform: translate(-25px, 25px) scale(0.95); }
+}
+
+.blob-drift {
+  animation: blob-drift 14s ease-in-out infinite;
+}
+
+.blob-drift-slow {
+  animation: blob-drift 22s ease-in-out infinite reverse;
+}
+
+/* -- Subtle grain/noise overlay for luxury feel -- */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.8'/></svg>");
+}
+
+/* -- Fade up on reveal -- */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* -- Slow rotation for mandala/sunburst -- */
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotate-slow {
+  animation: rotate-slow 60s linear infinite;
+}
+
+/* -- Glass card -- */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Gentle floating idle */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.float-gentle {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+/* Breathing scale idle */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.95; }
+  50% { transform: scale(1.03); opacity: 1; }
+}
+.breathe {
+  animation: breathe 7s ease-in-out infinite;
+}
+
+/* Subtle image parallax effect on scroll hover containers */
+.zoom-slow {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .zoom-slow {
+  transform: scale(1.06);
+}
+
+/* Button glow pulse */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 10px 30px rgba(226, 46, 100, 0.35); }
+  50% { box-shadow: 0 15px 40px rgba(226, 46, 100, 0.6); }
+}
+.glow-pulse {
+  animation: glow-pulse 3.5s ease-in-out infinite;
+}
+
+/* Shimmer sweep accent line */
+@keyframes shimmer-sweep {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(248, 162, 50, 0.7) 40%,
+    rgba(253, 224, 139, 0.95) 50%,
+    rgba(248, 162, 50, 0.7) 60%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-sweep 5s ease-in-out infinite;
+}
+
+/* Honor prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}
