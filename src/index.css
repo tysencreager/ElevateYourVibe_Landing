@@ -20,11 +20,88 @@ body {
   background-color: var(--bg);
   color: #111111;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   margin: 0;
 }
 
+/* Editorial / display type */
 .font-display {
+  font-family: 'Recoleta', 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+/* Tighter tracking on very large display type */
+.font-display.tracking-luxury,
+h1.font-display,
+h2.font-display {
+  letter-spacing: -0.02em;
+}
+
+/* Generous hero letter-spacing for the hero chip/eyebrows */
+.tracking-lux {
+  letter-spacing: 0.28em;
+}
+
+/* Section numeral (editorial magazine style) */
+.section-numeral {
   font-family: 'Recoleta', serif;
+  font-style: italic;
+  color: var(--gold);
+}
+
+/* Thin gold hairline */
+.gold-hair {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(248,162,50,0.6), transparent);
+}
+
+/* Soft hover lift */
+.lift {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+.lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Refine all lucide icons to thinner luxury stroke */
+svg.lucide {
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Scroll progress bar fixed at top */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  z-index: 70;
+  background: linear-gradient(90deg, #B71556, #E22E64, #F26B38, #F8A232);
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+/* Link underline animation */
+.link-sheen {
+  position: relative;
+}
+.link-sheen::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s ease;
+}
+.link-sheen:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .bento-card {

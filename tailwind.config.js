@@ -12,7 +12,8 @@ export default {
         bg: '#FAFAFA',
       },
       fontFamily: {
-        display: ['Recoleta', 'serif'],
+        display: ['Recoleta', 'Cormorant Garamond', 'Georgia', 'serif'],
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
         sans: ['Inter', 'sans-serif'],
       },
       animation: {

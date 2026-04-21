@@ -24,31 +24,23 @@ export default function Hero() {
       </div>
 
       <div className="max-w-5xl mx-auto flex flex-col items-center text-center relative z-10">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-magenta text-white font-bold text-xs uppercase tracking-widest mb-8 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
-          <Sparkles size={16} className="text-sun" />
+        <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md text-white font-bold text-[11px] uppercase tracking-[0.3em] mb-8 border border-white/30 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
+          <Sparkles size={14} strokeWidth={1.5} className="text-sun" />
           A Global Sisterhood Rising Together
         </div>
 
         <h1
-          className="text-5xl md:text-[6.5rem] leading-[1.05] mb-6 max-w-5xl font-display font-medium text-white"
+          className="text-5xl md:text-[6.5rem] leading-[1.05] mb-8 max-w-5xl font-display font-medium text-white"
           style={{
             textShadow:
               '0 2px 8px rgba(0,0,0,0.45), 0 4px 24px rgba(60,10,30,0.55), 0 1px 2px rgba(0,0,0,0.35)',
           }}
         >
-          Empower your energy.<br className="hidden md:block" />
-          <span
-            className="pr-2"
-            style={{
-              background: 'linear-gradient(90deg, #FDE08B, #F8A232, #FFB27A)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.45))',
-              fontStyle: 'italic',
-            }}
-          >
-            Transform your life.
+          Empower your energy.
+          <span className="block mt-3">
+            <span className="relative inline-block italic align-baseline px-4 md:px-6 py-1 md:py-2 rounded-2xl bg-gradient-to-br from-pink via-magenta to-[#6a0e33] shadow-[0_14px_40px_rgba(183,21,86,0.55)] text-white">
+              Transform your life.
+            </span>
           </span>
         </h1>
 
@@ -72,8 +64,11 @@ export default function Hero() {
           </Link>
         </div>
 
-        <p className="text-sm md:text-base font-bold text-magenta mt-8 bg-sun/95 backdrop-blur-md px-6 py-3 rounded-full border-2 border-magenta/10 shadow-[0_4px_16px_rgba(0,0,0,0.2)]">
-          🚨 First 50 members lock in the $88/mo launch rate for a full year!
+        <p className="inline-flex items-center gap-3 text-sm md:text-base font-bold text-magenta mt-8 bg-sun/95 backdrop-blur-md px-6 py-3 rounded-full border border-magenta/15 shadow-[0_4px_16px_rgba(0,0,0,0.2)]">
+          <span className="inline-block h-2 w-2 rounded-full bg-pink animate-pulse" />
+          <span className="uppercase tracking-[0.2em] text-xs">Launch</span>
+          <span className="hidden sm:inline text-magenta/40">|</span>
+          <span>First 50 members lock in $88/mo for a full year.</span>
         </p>
       </div>
     </section>

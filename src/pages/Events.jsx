@@ -56,11 +56,13 @@ export default function Events() {
         />
         <Blob tone="magenta" size="lg" className="-bottom-20 -left-20" opacity={25} slow />
         <div className="max-w-5xl mx-auto relative z-10 text-center">
-          <div className="inline-block px-4 py-1.5 bg-white/90 text-magenta rounded-full text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-white mb-5 inline-flex items-center gap-3">
+            <span className="section-numeral not-italic text-sun">01</span>
+            <span className="h-px w-8 bg-white/40" />
             Upcoming Events
-          </div>
+          </p>
           <h1 className="text-5xl md:text-7xl font-display text-white leading-tight mb-6 drop-shadow-md">
-            Where the <i>sisterhood</i> rises together.
+            Where the <span className="font-serif italic text-sun">sisterhood</span> rises together.
           </h1>
           <p className="text-lg md:text-xl text-white/95 font-medium max-w-2xl mx-auto">
             Primarily online, with select in-person moments that bring the community together.

@@ -22,8 +22,13 @@ export default function AboutCondensed() {
             </div>
           </div>
           <div className="w-full md:w-7/12">
+            <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-orange mb-5 inline-flex items-center gap-3">
+              <span className="section-numeral not-italic">06</span>
+              <span className="h-px w-8 bg-gold/60" />
+              Meet the Founder
+            </p>
             <h2 className="text-3xl md:text-5xl font-display leading-tight text-gray-900 mb-8">
-              “I want what’s introduced to <i className="text-orange">speak to the soul.</i>”
+              “I want what’s introduced to <span className="font-serif italic text-orange font-semibold">speak to the soul.”</span>
             </h2>
             <div className="space-y-5 text-gray-700 text-lg md:text-xl font-medium leading-relaxed">
               <p>

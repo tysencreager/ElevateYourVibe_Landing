@@ -56,11 +56,13 @@ export default function PillarsInteractive() {
     >
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-block px-4 py-1.5 bg-white text-magenta rounded-full text-xs font-bold uppercase tracking-widest mb-6 shadow-sm border border-gold/30">
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-pink mb-5 inline-flex items-center gap-3">
+            <span className="section-numeral not-italic">02</span>
+            <span className="h-px w-8 bg-gold/60" />
             The Framework
-          </div>
+          </p>
           <h2 className="text-4xl md:text-6xl font-display mb-4 text-gray-900">
-            Built on <i className="text-gradient">7 Pillars.</i>
+            Built on <span className="font-serif italic text-gradient font-semibold">7 Pillars.</span>
           </h2>
           <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto font-medium">
             Real change needs clarity. Tap a pillar to explore how each area supports the whole.
@@ -170,7 +172,7 @@ export default function PillarsInteractive() {
                 <h3 className="font-display text-6xl md:text-8xl leading-none mb-6 drop-shadow-lg">
                   {pillar.name}
                 </h3>
-                <p className="font-display italic text-xl md:text-2xl text-sun mb-6">
+                <p className="font-serif italic text-2xl md:text-3xl text-sun mb-6 leading-snug">
                   {pillar.tagline}
                 </p>
                 <p className="text-white/95 text-lg font-medium leading-relaxed max-w-xl">

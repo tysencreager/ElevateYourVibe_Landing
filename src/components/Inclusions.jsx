@@ -6,8 +6,9 @@ import {
   MessageCircleHeart,
   Map,
   Headphones,
-  Sparkles,
+  Sparkle,
   Gift,
+  Feather,
   ArrowRight,
 } from 'lucide-react';
 import Blob from './Blob.jsx';
@@ -19,7 +20,7 @@ const items = [
   { icon: <MessageCircleHeart />, text: 'Private Facebook Community', bg: 'bg-gradient-to-br from-gold to-orange text-white' },
   { icon: <Map />, text: 'The Energize Your Vibe Method + Roadmap', bg: 'bg-gradient-to-br from-orange to-pink text-white' },
   { icon: <Headphones />, text: 'Podcasts, Meditations & Spotify Playlist', bg: 'bg-gradient-to-br from-pink via-orange to-gold text-white' },
-  { icon: <Sparkles />, text: 'Affirmations & Vibe Checks', bg: 'bg-gradient-to-br from-sun to-orange/60 text-magenta' },
+  { icon: <Sparkle />, text: 'Affirmations & Vibe Checks', bg: 'bg-gradient-to-br from-sun to-orange/60 text-magenta' },
   {
     icon: <Gift />,
     text: 'Personalized Welcome Gift in the Mail',
@@ -34,8 +35,13 @@ export default function Inclusions() {
       <Blob tone="gold" size="md" className="bottom-40 -left-20" opacity={18} />
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-display mb-6 text-gray-900">
-            Everything inside your membership.
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-pink mb-5 inline-flex items-center gap-3">
+            <span className="section-numeral not-italic">03</span>
+            <span className="h-px w-8 bg-gold/60" />
+            Inside
+          </p>
+          <h2 className="text-4xl md:text-6xl font-display mb-6 text-gray-900 leading-tight">
+            Everything inside <span className="font-serif italic text-pink font-semibold">your membership.</span>
           </h2>
           <p className="text-gray-500 text-lg md:text-xl font-medium max-w-2xl mx-auto">
             Tools for developing yourself, a community that roots for you, and little touches that remind you you’re not alone.
@@ -97,13 +103,11 @@ export default function Inclusions() {
 
         <div className="grid md:grid-cols-2 gap-6 mb-16">
           <div className="bento-card glass border border-gold/30 p-8 flex gap-6 items-center">
-            <img
-              src="/assets/self-care-kit.png"
-              alt="Self care kit"
-              className="w-28 h-28 rounded-2xl object-cover shadow-md shrink-0"
-            />
+            <div className="w-28 h-28 rounded-2xl bg-gradient-to-br from-gold via-orange to-pink flex items-center justify-center shrink-0 shadow-md">
+              <Gift size={44} strokeWidth={1.25} className="text-white" />
+            </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-orange mb-2">
+              <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-orange mb-2">
                 A Personal Touch
               </p>
               <h3 className="font-display text-2xl text-gray-900 mb-1">Tools you can hold.</h3>
@@ -115,10 +119,10 @@ export default function Inclusions() {
 
           <div className="bento-card glass border border-pink/20 p-8 flex gap-6 items-center">
             <div className="w-28 h-28 rounded-2xl bg-brand-gradient flex items-center justify-center shrink-0 shadow-md">
-              <Sparkles size={44} className="text-white" />
+              <Feather size={44} strokeWidth={1.25} className="text-white" />
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-pink mb-2">
+              <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-pink mb-2">
                 Tailored To You
               </p>
               <h3 className="font-display text-2xl text-gray-900 mb-1">
@@ -138,8 +142,11 @@ export default function Inclusions() {
           >
             Secure Your Membership <ArrowRight size={20} />
           </a>
-          <p className="mt-6 text-pink font-bold text-base bg-pink/10 px-6 py-2 rounded-full">
-            🔥 Launch pricing available now — first 50 members only.
+          <p className="mt-6 inline-flex items-center gap-3 text-pink font-bold text-sm md:text-base bg-pink/10 px-6 py-2.5 rounded-full border border-pink/20">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-pink animate-pulse" />
+            <span className="uppercase tracking-[0.2em] text-xs">Now Open</span>
+            <span className="text-pink/40">|</span>
+            <span>First 50 members only.</span>
           </p>
         </div>
       </div>

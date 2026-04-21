@@ -1,32 +1,59 @@
-import Sunburst from './Sunburst.jsx';
+import { Globe, Sparkle } from 'lucide-react';
+import Blob from './Blob.jsx';
+
+const pillars = [
+  { label: 'Online Haven', desc: 'Daily lives, monthly calls, and a library of tools — from wherever you are.' },
+  { label: 'In-Person Magic', desc: 'Select gatherings, retreats, and local spaces that bring us together.' },
+  { label: 'Truly Personal', desc: 'We know your name. We root for you. We genuinely care.' },
+];
 
 export default function GlobalSisterhood() {
   return (
-    <section className="relative z-10 overflow-hidden">
-      <div className="relative min-h-[380px] md:min-h-[460px]">
-        <img
-          src="/assets/online-sisterhood.png"
-          alt="Women from around the world connecting online"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-magenta/92 via-magenta/60 to-transparent" />
-        <Sunburst
-          className="absolute -right-32 -top-32 w-[520px] h-[520px] opacity-15"
-          strokeColor="rgba(253,224,139,0.8)"
-        />
+    <section className="relative z-10 py-24 md:py-32 px-6 bg-soft-sunset overflow-hidden">
+      <Blob tone="pink" size="lg" className="-top-20 -right-20" opacity={18} slow />
+      <Blob tone="gold" size="md" className="bottom-0 -left-20" opacity={22} />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 md:py-24 text-white">
-          <div className="max-w-xl">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-sun mb-4">
-              A Global Sisterhood
-            </p>
-            <h2 className="font-display text-4xl md:text-6xl leading-tight mb-6 drop-shadow-lg">
-              Connection <i className="text-sun">without borders.</i>
-            </h2>
-            <p className="text-lg md:text-xl font-medium leading-relaxed text-white/95 drop-shadow">
-              Primarily online — with select in-person moments that bring us together. Wherever you are, there’s a seat for you at this table.
-            </p>
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Heading block */}
+        <div className="max-w-3xl mx-auto text-center mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gold/30 text-magenta font-bold text-[11px] uppercase tracking-[0.3em] mb-6 shadow-sm">
+            <Globe size={14} strokeWidth={1.75} />
+            A Global Sisterhood
           </div>
+          <h2 className="font-display text-4xl md:text-6xl leading-tight text-gray-900 mb-5">
+            Connection <i className="text-gradient">without borders.</i>
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 font-medium leading-relaxed">
+            Primarily online, with select in-person moments that bring us together. Wherever you are in the world, there’s a seat for you at this table.
+          </p>
+        </div>
+
+        {/* Photo */}
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/60 mb-10">
+          <img
+            src="/assets/online-sisterhood.png"
+            alt="Women from around the world connecting online"
+            className="w-full h-auto object-cover aspect-[21/9]"
+          />
+          {/* Subtle bottom gloss */}
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" />
+        </div>
+
+        {/* Three supporting pillars */}
+        <div className="grid md:grid-cols-3 gap-5">
+          {pillars.map((p, i) => (
+            <div
+              key={i}
+              className="bento-card glass border border-gold/25 p-7 flex flex-col gap-3"
+            >
+              <div className="flex items-center gap-3">
+                <span className="font-display text-2xl text-pink">0{i + 1}</span>
+                <Sparkle size={16} strokeWidth={1.5} className="text-gold" />
+              </div>
+              <h3 className="font-display text-xl text-gray-900">{p.label}</h3>
+              <p className="text-gray-600 text-sm md:text-base font-medium leading-relaxed">{p.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

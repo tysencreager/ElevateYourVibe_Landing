@@ -20,11 +20,13 @@ export default function About() {
         <Blob tone="magenta" size="lg" className="-bottom-20 right-10" opacity={15} />
         <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2">
-            <div className="inline-block px-4 py-1.5 bg-magenta text-sun rounded-full text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-magenta mb-5 inline-flex items-center gap-3">
+              <span className="section-numeral not-italic">01</span>
+              <span className="h-px w-8 bg-magenta/40" />
               Meet Jenn
-            </div>
+            </p>
             <h1 className="text-5xl md:text-7xl font-display text-magenta leading-tight mb-6">
-              The heart behind <i className="text-gradient">Energize Your Vibe.</i>
+              The heart behind <span className="font-serif italic text-gradient font-semibold">Energize Your Vibe.</span>
             </h1>
             <p className="text-lg md:text-xl text-magenta/90 font-medium leading-relaxed mb-6">
               Jenn is the founder of Energize Your Vibe — a transformational global sisterhood rooted in self-love, confidence, and authentic connection. She built this community for women who want more: real tools, real support, and a place to simply be themselves.
@@ -163,49 +165,57 @@ export default function About() {
             </aside>
           </div>
 
-          {/* VISION CARD with photo background */}
-          <div className="relative mt-16 rounded-3xl overflow-hidden shadow-2xl border border-white/40">
-            <img
-              src="/assets/women-boardwalk.png"
-              alt="Women celebrating at sunset"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-magenta/92 via-pink/85 to-orange/80" />
-            <Sunburst
-              className="absolute -right-32 -top-32 w-[420px] h-[420px] opacity-20"
-              strokeColor="rgba(253,224,139,0.8)"
-            />
-            <div className="relative z-10 p-8 md:p-14 text-white">
-              <p className="text-xs font-bold uppercase tracking-[0.3em] text-sun mb-4">
-                The Vision
-              </p>
-              <h3 className="font-display text-4xl md:text-6xl mb-8 leading-tight">
-                More than a program — <i className="text-sun">a movement.</i>
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6 text-base md:text-lg font-medium leading-relaxed">
-                <p>
-                  Energize Your Vibe was born through inspiration and lived experience. It is a community and a movement — a space where women can come as they are, be supported, grow, and rise.
-                </p>
-                <p>
-                  Jenn’s vision goes beyond online connection. Healing and fulfillment also come through shared experiences — gathering, playing, laughing, learning, and truly living life together.
-                </p>
-                <p>
-                  Her vision is to expand this community across the country, empowering women to step into leadership and creating local spaces where others can gather, feel seen, and know they matter.
-                </p>
-                <p>
-                  This community is built on intention. It’s not a space for gossip, blame, or staying stuck — it’s a space for support, empowerment, accountability, and real transformation.
-                </p>
+          {/* VISION CARD — photo left, text right */}
+          <div className="relative mt-16 rounded-3xl overflow-hidden shadow-2xl border border-white/40 grid md:grid-cols-[1fr_1.1fr]">
+            {/* Photo side */}
+            <div className="relative min-h-[320px] md:min-h-[600px]">
+              <img
+                src="/assets/women-boardwalk.png"
+                alt="Women celebrating at sunset"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 md:bg-gradient-to-r md:from-magenta/30 md:via-transparent md:to-magenta" />
+              <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm text-magenta text-[10px] font-bold uppercase tracking-[0.3em] shadow-lg">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-pink" />
+                Rise together
               </div>
-              <div className="mt-10 pt-8 border-t border-white/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                <p className="font-display italic text-3xl md:text-4xl text-sun">
-                  “You are welcome here. I love you.”
+            </div>
+
+            {/* Text side */}
+            <div className="relative bg-gradient-to-br from-magenta via-[#8A1249] to-[#3b0a24] text-white p-8 md:p-14 flex flex-col justify-center grain">
+              <Sunburst
+                className="absolute -right-24 -top-24 w-[380px] h-[380px] opacity-15"
+                strokeColor="rgba(253,224,139,0.8)"
+              />
+              <div className="relative z-10">
+                <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-sun mb-4">
+                  The Vision
                 </p>
-                <Link
-                  to="/#pricing"
-                  className="shrink-0 inline-flex items-center gap-3 bg-sun text-magenta py-4 px-8 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors shadow-lg"
-                >
-                  Join Us <ArrowRight size={18} />
-                </Link>
+                <h3 className="font-display text-4xl md:text-5xl mb-6 leading-[1.05]">
+                  More than a program — <i className="text-sun">a movement.</i>
+                </h3>
+                <div className="space-y-4 text-base md:text-lg font-medium leading-relaxed text-white/95 mb-8">
+                  <p>
+                    Energize Your Vibe was born through inspiration and lived experience — a space where women come as they are, are supported, grow, and rise.
+                  </p>
+                  <p>
+                    Healing and fulfillment come through shared experiences — gathering, playing, laughing, learning, and truly living life together.
+                  </p>
+                  <p>
+                    A community built on intention. Not a space for gossip, blame, or staying stuck — a space for support, empowerment, accountability, and real transformation.
+                  </p>
+                </div>
+                <div className="pt-6 border-t border-white/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+                  <p className="font-display italic text-2xl md:text-3xl text-sun">
+                    “You are welcome here. I love you.”
+                  </p>
+                  <Link
+                    to="/#pricing"
+                    className="shrink-0 inline-flex items-center gap-3 bg-sun text-magenta py-4 px-7 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors shadow-lg"
+                  >
+                    Join Us <ArrowRight size={16} strokeWidth={1.75} />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

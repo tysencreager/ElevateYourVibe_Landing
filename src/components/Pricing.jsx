@@ -38,8 +38,14 @@ export default function Pricing() {
       />
       <Blob tone="magenta" size="xl" className="bottom-0 -left-40" opacity={25} slow />
       <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
-        <h2 className="text-4xl md:text-7xl font-display mb-6 text-white drop-shadow-md">
-          Reserve your spot in the community.
+        <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-sun mb-5 inline-flex items-center gap-3">
+          <span className="section-numeral not-italic text-sun">05</span>
+          <span className="h-px w-8 bg-sun/60" />
+          Membership
+        </p>
+        <h2 className="text-4xl md:text-7xl font-display mb-6 text-white drop-shadow-md leading-tight">
+          Reserve your spot <br className="hidden md:block" />
+          <span className="font-serif italic text-sun">in the community.</span>
         </h2>
         <p className="text-xl md:text-2xl text-white/95 mb-14 max-w-2xl mx-auto font-medium drop-shadow-sm">
           Say yes to coming back home to yourself. Stop figuring it out alone.
@@ -96,8 +102,9 @@ export default function Pricing() {
           </button>
 
           <div className="text-center">
-            <p className="text-magenta text-sm font-bold bg-magenta/5 inline-block px-5 py-3 rounded-full border border-magenta/10">
-              ✨ Register before May 2026 — first payment covers May AND June events!
+            <p className="inline-flex items-center gap-3 text-magenta text-sm font-bold bg-magenta/5 px-5 py-3 rounded-full border border-magenta/15">
+              <span className="uppercase tracking-[0.2em] text-[10px] bg-magenta text-sun px-2 py-0.5 rounded-full">Bonus</span>
+              <span>Register before May 2026 — first payment covers May AND June events.</span>
             </p>
           </div>
         </div>

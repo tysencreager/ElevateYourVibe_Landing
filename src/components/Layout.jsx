@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import AlertBanner from './AlertBanner.jsx';
 import Nav from './Nav.jsx';
 import Footer from './Footer.jsx';
+import ScrollProgress from './ScrollProgress.jsx';
 
 export default function Layout() {
   const { pathname } = useLocation();
@@ -13,6 +14,7 @@ export default function Layout() {
 
   return (
     <div className="relative overflow-x-hidden min-h-screen selection:bg-pink selection:text-white">
+      <ScrollProgress />
       <AlertBanner />
       <Nav />
       <main>
