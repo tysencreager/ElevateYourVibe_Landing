@@ -3,6 +3,7 @@ import { ArrowRight, Quote } from 'lucide-react';
 import { pillars, pillarColorClasses } from '../data/pillars.js';
 import Blob from '../components/Blob.jsx';
 import Sunburst from '../components/Sunburst.jsx';
+import { CHECKOUT_URL } from '../data/links.js';
 
 const quotes = [
   '“I want what’s introduced to speak to the soul.”',
@@ -26,12 +27,14 @@ export default function About() {
             <p className="text-lg md:text-xl text-magenta/90 font-medium leading-relaxed mb-6">
               Jenn is the founder of Energize Your Vibe — a transformational global sisterhood rooted in self-love, confidence, and authentic connection. She built this community for women who want more: real tools, real support, and a place to simply be themselves.
             </p>
-            <Link
-              to="/#pricing"
+            <a
+              href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-magenta text-white py-4 px-8 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-pink transition-colors shadow-lg"
             >
               Join The Sisterhood <ArrowRight size={18} />
-            </Link>
+            </a>
           </div>
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative rounded-3xl overflow-hidden aspect-[3/4] max-w-sm w-full shadow-2xl border-4 border-white">
@@ -204,12 +207,14 @@ export default function About() {
                   <p className="font-display italic text-xl sm:text-2xl md:text-3xl text-sun">
                     “You are welcome here. I love you.”
                   </p>
-                  <Link
-                    to="/#pricing"
+                  <a
+                    href={CHECKOUT_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="shrink-0 inline-flex items-center gap-3 bg-sun text-magenta py-4 px-7 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors shadow-lg"
                   >
                     Join Us <ArrowRight size={16} strokeWidth={1.75} />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -349,12 +354,14 @@ export default function About() {
           </div>
 
           <div className="mt-14 text-center">
-            <Link
-              to="/#pricing"
+            <a
+              href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-magenta text-white py-5 px-10 rounded-full font-bold uppercase tracking-widest text-base hover:bg-pink transition-colors shadow-lg"
             >
               Reserve Your Spot <ArrowRight size={18} />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

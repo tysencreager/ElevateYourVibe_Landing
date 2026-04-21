@@ -1,6 +1,7 @@
 import { Check } from 'lucide-react';
 import Blob from './Blob.jsx';
 import Sunburst from './Sunburst.jsx';
+import { CHECKOUT_URL } from '../data/links.js';
 
 const perks = [
   {
@@ -89,12 +90,14 @@ export default function Pricing() {
             </p>
           </div>
 
-          <button
-            type="button"
-            className="w-full bg-pink text-white py-5 md:py-6 px-8 rounded-full font-bold uppercase tracking-widest text-lg md:text-xl hover:bg-magenta transition-colors shadow-[0_10px_30px_rgba(226,46,100,0.35)] mb-6"
+          <a
+            href={CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-center w-full bg-pink text-white py-5 md:py-6 px-8 rounded-full font-bold uppercase tracking-widest text-lg md:text-xl hover:bg-magenta transition-colors shadow-[0_10px_30px_rgba(226,46,100,0.35)] mb-6"
           >
             Reserve Your Spot Now
-          </button>
+          </a>
 
           <div className="text-center">
             <p className="inline-flex items-center gap-3 text-magenta text-sm font-bold bg-magenta/5 px-5 py-3 rounded-full border border-magenta/15">

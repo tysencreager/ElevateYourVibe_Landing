@@ -13,6 +13,7 @@ import {
 import Blob from './Blob.jsx';
 import GradientBarList from './GradientBarList.jsx';
 import Reveal from './Reveal.jsx';
+import { CHECKOUT_URL } from '../data/links.js';
 
 const itemsLeft = [
   { icon: <Video />, text: "Daily 'Lives for Vibes'", accent: 'sun' },
@@ -128,7 +129,9 @@ export default function Inclusions() {
 
         <div className="flex flex-col items-center">
           <a
-            href="#pricing"
+            href={CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-brand-gradient text-white py-5 px-12 rounded-full font-bold uppercase tracking-widest text-lg shadow-[0_10px_30px_rgba(242,107,56,0.4)] hover:shadow-[0_15px_40px_rgba(242,107,56,0.6)] transition-all hover:-translate-y-1 flex items-center gap-3"
           >
             Secure Your Membership <ArrowRight size={20} />

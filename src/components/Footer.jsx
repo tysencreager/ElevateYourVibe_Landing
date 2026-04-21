@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Mail, Instagram, Facebook, ArrowUpRight } from 'lucide-react';
 import Sunburst from './Sunburst.jsx';
+import { CHECKOUT_URL } from '../data/links.js';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -78,7 +79,7 @@ export default function Footer() {
               <li><Link to="/" className="hover:text-sun transition-colors">Home</Link></li>
               <li><Link to="/about" className="hover:text-sun transition-colors">About Jenn</Link></li>
               <li><Link to="/events" className="hover:text-sun transition-colors">Events</Link></li>
-              <li><Link to="/#pricing" className="hover:text-sun transition-colors">Membership</Link></li>
+              <li><a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="hover:text-sun transition-colors">Membership</a></li>
             </ul>
           </div>
           <div>

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, MapPin, CheckCircle2, Video, Headphones, Flower2 } from 'lucide-react';
 import Blob from '../components/Blob.jsx';
 import Sunburst from '../components/Sunburst.jsx';
+import { CHECKOUT_URL } from '../data/links.js';
 
 const eventTypes = [
   {
@@ -76,12 +77,14 @@ export default function Events() {
             <p className="text-gray-600 text-lg md:text-xl font-medium max-w-2xl mx-auto mb-8">
               The May and June event lineup is being finalized. Check back shortly — or reserve your spot now so you don’t miss a thing.
             </p>
-            <Link
-              to="/#pricing"
+            <a
+              href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-magenta text-white py-4 px-8 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-pink transition-colors shadow-lg"
             >
               Reserve My Spot <ArrowRight size={18} />
-            </Link>
+            </a>
           </div>
 
           {/* WHAT TO EXPECT */}
@@ -154,12 +157,14 @@ export default function Events() {
                 <CheckCircle2 className="text-sun" size={20} /> Limited spots available
               </li>
             </ul>
-            <Link
-              to="/#pricing"
+            <a
+              href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-sun text-magenta py-4 px-8 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-white transition-colors shadow-lg"
             >
               Secure My Member Rate <ArrowRight size={18} />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
