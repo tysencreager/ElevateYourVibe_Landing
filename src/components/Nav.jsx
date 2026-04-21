@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { CHECKOUT_URL } from '../data/links.js';
 
 const links = [
   { to: '/', label: 'Home' },
@@ -60,12 +61,14 @@ export default function Nav() {
             ))}
           </div>
 
-          <Link
-            to="/#pricing"
+          <a
+            href={CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:inline-block bg-pink text-white hover:bg-magenta px-6 py-3 rounded-full text-sm font-bold transition-colors shadow-md uppercase tracking-wider"
           >
             Join Us
-          </Link>
+          </a>
 
           <button
             className="md:hidden text-magenta bg-sun p-2 rounded-full"
@@ -90,13 +93,15 @@ export default function Nav() {
               {l.label}
             </NavLink>
           ))}
-          <Link
-            to="/#pricing"
+          <a
+            href={CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsMenuOpen(false)}
             className="bg-sun text-magenta text-center py-5 rounded-full font-bold text-xl mt-4 uppercase tracking-widest shadow-lg"
           >
             Join Us
-          </Link>
+          </a>
         </div>
       )}
     </>

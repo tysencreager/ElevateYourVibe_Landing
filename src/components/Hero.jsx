@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { CHECKOUT_URL } from '../data/links.js';
 
 export default function Hero() {
   return (
@@ -52,7 +53,9 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row items-center gap-3 w-full justify-center">
           <a
-            href="#pricing"
+            href={CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto bg-magenta text-white py-4 px-8 rounded-full font-bold uppercase tracking-widest text-base glow-pulse hover:shadow-[0_15px_40px_rgba(183,21,86,0.75)] transition-all hover:-translate-y-1 flex items-center justify-center gap-3"
           >
             Reserve Your Spot <ArrowRight size={18} />
