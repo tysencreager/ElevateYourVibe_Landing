@@ -48,31 +48,65 @@ export default function About() {
       {/* BIO */}
       <section className="relative py-24 px-6 bg-white">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-display text-gray-900 mb-10">
-            Her <i className="text-pink">story.</i>
-          </h2>
+          <div className="mb-10">
+            <p className="text-xs font-bold uppercase tracking-widest text-pink mb-3">
+              Founder · Holistic Health Practitioner
+            </p>
+            <h2 className="text-3xl md:text-5xl font-display text-gray-900 mb-3">
+              Jenn <i className="text-pink">Davis.</i>
+            </h2>
+            <p className="text-lg md:text-xl text-gray-500 font-medium">
+              Founder of Energize Your Vibe & Owner of Connected Roots Healing Space in Draper, UT.
+            </p>
+          </div>
           <div className="space-y-6 text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-            {/* PLACEHOLDER BIO — swap with the content of jenn_bio.txt */}
             <p>
-              Jenn has spent over two decades walking alongside women in their healing, growth, and
-              becoming. She knows what it feels like to hold it all together on the outside while
-              feeling disconnected on the inside — and she built Energize Your Vibe so no woman has
-              to do that alone.
+              Jenn Davis is a certified Holistic Health Practitioner specializing in energy and wellness, trained in the energetics of the body and the subconscious. She is certified in Applied Kinesiology, a Reiki Master, yoga teacher, and an ICF Level 2 Life Coach. Her work blends science-backed coaching with deep emotional and energetic support, helping individuals regulate their nervous system, shift their mindset, and create lasting change from within.
             </p>
             <p>
-              Her work is grounded in both soul and science. She draws from years of lived
-              experience, mentorship, and research in wellness to offer tools that meet women
-              exactly where they are — not where anyone else thinks they should be.
+              Jenn has spent decades committed to personal growth, healing, and understanding what it truly means to live a fulfilling life. She is deeply passionate about supporting people in remembering who they are — that they matter, are seen, heard, and deeply loved. Creating space for others to experience peace, clarity, and genuine joy is not just her work, it is her life’s mission and passion.
             </p>
             <p>
-              Jenn leads with love. She lives with intention. She believes that real change
-              doesn’t come from fixing yourself, but from being fully supported as you reconnect
-              with who you already are.
+              Her journey has been shaped by both profound love and deep loss. Widowed at the age of 22 and left to raise her young child, Jenn faced one of life’s most defining moments early on. In the midst of grief and uncertainty, she made a choice to keep going. That choice led her into years of self-development, faith, healing work, and deep inner exploration.
             </p>
-            <p className="text-base italic text-gray-500">
-              Full bio coming soon — this section will be replaced with the content from{' '}
-              <code className="bg-gray-100 px-1.5 py-0.5 rounded">jenn_bio.txt</code>.
+            <p>
+              Throughout her life, Jenn has also experienced the heartbreak of losing two of her childhood best friends to cancer, and has been impacted by the loss of loved ones through suicide. She has walked alongside friends and family members navigating mental health challenges and addiction, giving her a deep, personal understanding of the weight many people carry. These experiences have shaped her perspective, strengthening her compassion and reinforcing her belief in the importance of connection, support, and truly valuing life.
             </p>
+            <p>
+              Later in life, as unresolved trauma and grief surfaced, Jenn experienced another layer of transformation. What once felt light became heavy. Instead of turning away, she leaned in. Through emotional healing, mindset work, nervous system regulation, and a deep reliance on her faith in God, she found her way back to herself. She didn’t just learn the work — she embodied it, and continues to do so. She values practicing what she preaches, in life and with clients. She won’t tell you what you want to hear; she will share truth, and respects when she is treated the same — even when it can hurt or be confronting. Communication and willingness are key.
+            </p>
+            <p>
+              Today, Jenn lives with a grounded sense of inner peace, love, and alignment. She brings real-life experience, compassion, and clarity into every space she holds. She sees people for who they are and meets them where they are, while also guiding them forward. She thrives using her cheerleading super powers, and experiencing pure joy for herself and witnessing it in others.
+            </p>
+            <p>
+              Jenn is deeply rooted in her relationship with God and her Savior. While this is central to her life, she honors and respects each individual’s beliefs and personal journey. She believes love is the foundation of healing, and values the unique light within every person.
+            </p>
+            <p>
+              She has been married to her sweetheart for 24 years and is the proud mother of three adult children. Originally from Washington State, she has called Utah home for the past 20 years. She loves Utah and its seasons — the mountains, water, and adventure.
+            </p>
+          </div>
+
+          <div className="mt-12 bg-gradient-to-br from-sun/60 to-orange/30 rounded-3xl p-8 md:p-10 border border-gold/40">
+            <p className="text-xs font-bold uppercase tracking-widest text-magenta mb-4">
+              The Vision
+            </p>
+            <div className="space-y-5 text-lg md:text-xl text-gray-800 font-medium leading-relaxed">
+              <p>
+                Energize Your Vibe was born through inspiration and lived experience. It is more than a program — it is a community and a movement. A space where women can come as they are, be supported, grow, and rise.
+              </p>
+              <p>
+                Jenn’s vision goes beyond online connection. While education and support are foundational, she believes healing and fulfillment also come through shared experiences — gathering, playing, laughing, learning, and truly living life together. Energize Your Vibe is a space where women not only connect, but create meaningful memories and relationships.
+              </p>
+              <p>
+                Her vision is to expand this community across the country by empowering women to step into leadership, creating local spaces where others can gather, feel seen, and know they matter.
+              </p>
+              <p>
+                This community is built on intention. Women are welcome here, and they must come willing. Willing to show up, to grow, to take ownership of their lives. This is not a space for gossip, blame, or staying stuck in a victim mindset. It is a space for support, empowerment, accountability, and real transformation.
+              </p>
+              <p className="text-magenta font-display italic text-2xl md:text-3xl pt-2">
+                “You are welcome here. I love you.”
+              </p>
+            </div>
           </div>
         </div>
       </section>
