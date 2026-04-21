@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Reveal from './Reveal.jsx';
 
 export default function Hero() {
   return (
-    <section className="relative z-10 pt-56 pb-20 md:pt-72 md:pb-32 px-6 overflow-hidden bg-sun">
+    <section className="relative z-10 pt-40 pb-16 md:pt-72 md:pb-32 px-5 md:px-6 overflow-hidden bg-sun">
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <video
           className="absolute inset-0 w-full h-full object-cover kenburns"
@@ -26,12 +26,12 @@ export default function Hero() {
 
       <div className="max-w-5xl mx-auto flex flex-col items-center text-center relative z-10">
         <Reveal direction="down" className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-white font-bold text-[10px] md:text-[11px] uppercase tracking-[0.3em] mb-6 border border-white/30 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
-          <Sparkles size={14} strokeWidth={1.5} className="text-sun" />
+          <span className="inline-block h-1.5 w-1.5 rounded-full bg-sun" />
           A Global Sisterhood Rising Together
         </Reveal>
 
         <h1
-          className="text-4xl md:text-[5.25rem] leading-[0.98] mb-6 max-w-5xl font-display font-medium text-white"
+          className="text-[2.2rem] sm:text-4xl md:text-[5.25rem] leading-[0.98] mb-5 md:mb-6 max-w-5xl font-display font-medium text-white"
           style={{
             textShadow:
               '0 2px 8px rgba(0,0,0,0.5), 0 4px 24px rgba(60,10,30,0.6), 0 1px 2px rgba(0,0,0,0.4)',
@@ -53,7 +53,7 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="text-base md:text-xl text-white mb-8 max-w-2xl leading-snug font-medium bg-black/25 backdrop-blur-md rounded-2xl px-5 py-3 border border-white/20 shadow-lg">
+        <p className="text-sm md:text-xl text-white mb-6 md:mb-8 max-w-2xl leading-snug font-medium bg-black/25 backdrop-blur-md rounded-2xl px-4 md:px-5 py-3 border border-white/20 shadow-lg">
           Energize Your Vibe is a transformational global sisterhood rooted in self-love, confidence, and authentic connection.
           <span className="text-sun font-semibold"> We lead with love. We live with intention. We have fun.</span>
         </p>

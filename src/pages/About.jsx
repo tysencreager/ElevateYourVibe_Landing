@@ -15,12 +15,12 @@ export default function About() {
   return (
     <>
       {/* HERO */}
-      <section className="relative pt-40 pb-20 md:pt-48 md:pb-28 px-6 bg-gradient-to-br from-sun via-gold/40 to-orange/60 overflow-hidden">
+      <section className="relative pt-32 pb-14 md:pt-48 md:pb-28 px-5 md:px-6 bg-gradient-to-br from-sun via-gold/40 to-orange/60 overflow-hidden">
         <Blob tone="pink" size="xl" className="-top-20 -left-20" opacity={20} slow />
         <Blob tone="magenta" size="lg" className="-bottom-20 right-10" opacity={15} />
         <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2">
-            <h1 className="text-5xl md:text-7xl font-display text-magenta leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-display text-magenta leading-tight mb-6">
               The heart behind <span className="font-serif italic text-gradient font-semibold">Energize Your Vibe.</span>
             </h1>
             <p className="text-lg md:text-xl text-magenta/90 font-medium leading-relaxed mb-6">
@@ -46,7 +46,7 @@ export default function About() {
       </section>
 
       {/* BIO */}
-      <section className="relative py-24 px-6 bg-soft-sunset overflow-hidden">
+      <section className="relative py-20 md:py-24 px-5 md:px-6 bg-soft-sunset overflow-hidden">
         <Blob tone="gold" size="xl" className="-top-40 -right-40" opacity={18} slow />
         <Blob tone="pink" size="md" className="bottom-20 -left-20" opacity={14} />
 
@@ -177,7 +177,7 @@ export default function About() {
             </div>
 
             {/* Text side */}
-            <div className="relative bg-gradient-to-br from-magenta via-[#8A1249] to-[#3b0a24] text-white p-8 md:p-14 flex flex-col justify-center grain">
+            <div className="relative bg-gradient-to-br from-magenta via-[#8A1249] to-[#3b0a24] text-white p-7 sm:p-8 md:p-14 flex flex-col justify-center grain">
               <Sunburst
                 className="absolute -right-24 -top-24 w-[380px] h-[380px] opacity-15"
                 strokeColor="rgba(253,224,139,0.8)"
@@ -186,7 +186,7 @@ export default function About() {
                 <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-sun mb-4">
                   The Vision
                 </p>
-                <h3 className="font-display text-4xl md:text-5xl mb-6 leading-[1.05]">
+                <h3 className="font-display text-3xl sm:text-4xl md:text-5xl mb-5 md:mb-6 leading-[1.05]">
                   More than a program — <i className="text-sun">a movement.</i>
                 </h3>
                 <div className="space-y-4 text-base md:text-lg font-medium leading-relaxed text-white/95 mb-8">
@@ -201,7 +201,7 @@ export default function About() {
                   </p>
                 </div>
                 <div className="pt-6 border-t border-white/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
-                  <p className="font-display italic text-2xl md:text-3xl text-sun">
+                  <p className="font-display italic text-xl sm:text-2xl md:text-3xl text-sun">
                     “You are welcome here. I love you.”
                   </p>
                   <Link
@@ -218,7 +218,7 @@ export default function About() {
       </section>
 
       {/* QUOTES */}
-      <section className="relative py-24 px-6 bg-bg">
+      <section className="relative py-20 md:py-24 px-5 md:px-6 bg-bg">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-display text-gray-900 mb-14 text-center">
             In Jenn’s <i className="text-orange">own words.</i>
@@ -240,7 +240,7 @@ export default function About() {
       </section>
 
       {/* FULL 7 PILLARS */}
-      <section className="relative py-24 px-6 bg-gradient-to-br from-magenta via-[#8A1249] to-[#3b0a24] text-white overflow-hidden">
+      <section className="relative py-20 md:py-24 px-5 md:px-6 bg-gradient-to-br from-magenta via-[#8A1249] to-[#3b0a24] text-white overflow-hidden">
         <Sunburst
           className="absolute -right-40 -top-40 w-[600px] h-[600px] opacity-15"
           strokeColor="rgba(253,224,139,0.8)"
@@ -285,7 +285,7 @@ export default function About() {
       </section>
 
       {/* WHY THE FRAMEWORK */}
-      <section className="relative py-24 px-6 bg-white">
+      <section className="relative py-20 md:py-24 px-5 md:px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-display text-gray-900 mb-4">

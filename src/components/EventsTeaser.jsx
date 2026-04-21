@@ -4,9 +4,9 @@ import Reveal from './Reveal.jsx';
 
 export default function EventsTeaser() {
   return (
-    <section id="events" className="relative z-10 py-28 bg-soft-dawn overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row gap-8 relative z-10">
-        <Reveal direction="right" className="w-full lg:w-1/2 bento-card p-10 md:p-14 glass border border-gold/20">
+    <section id="events" className="relative z-10 py-20 md:py-28 bg-soft-dawn overflow-hidden">
+      <div className="max-w-6xl mx-auto px-5 md:px-6 flex flex-col lg:flex-row gap-6 md:gap-8 relative z-10">
+        <Reveal direction="right" className="w-full lg:w-1/2 bento-card p-7 md:p-14 glass border border-gold/20">
           <h2 className="text-4xl md:text-5xl font-display mb-6 text-gray-900 leading-tight">
             Calls, gatherings &amp; <span className="font-serif italic text-pink font-semibold">moments to rise together.</span>
           </h2>
@@ -47,7 +47,7 @@ export default function EventsTeaser() {
           />
           <div className="absolute inset-0 bg-gradient-to-tr from-magenta/75 via-magenta/25 to-transparent" />
 
-          <div className="relative z-10 flex flex-col h-full justify-between p-10 md:p-14">
+          <div className="relative z-10 flex flex-col h-full justify-between p-7 md:p-14">
             <div>
               <MapPin size={40} className="text-sun mb-6" />
               <h3 className="text-5xl md:text-6xl font-display italic mb-3">Summer Retreat</h3>

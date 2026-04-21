@@ -1,4 +1,4 @@
-import { Globe, Sparkle } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import Blob from './Blob.jsx';
 import Reveal from './Reveal.jsx';
 
@@ -10,7 +10,7 @@ const pillars = [
 
 export default function GlobalSisterhood() {
   return (
-    <section className="relative z-10 py-24 md:py-32 px-6 bg-soft-sunset overflow-hidden">
+    <section className="relative z-10 py-20 md:py-32 px-5 md:px-6 bg-soft-sunset overflow-hidden">
       <Blob tone="pink" size="lg" className="-top-20 -right-20" opacity={18} slow />
       <Blob tone="gold" size="md" className="bottom-0 -left-20" opacity={22} />
 
@@ -50,7 +50,7 @@ export default function GlobalSisterhood() {
             >
               <div className="flex items-center gap-3">
                 <span className="font-display text-2xl text-pink">0{i + 1}</span>
-                <Sparkle size={16} strokeWidth={1.5} className="text-gold" />
+                <span className="h-px w-10 bg-gold/70" />
               </div>
               <h3 className="font-display text-xl text-gray-900">{p.label}</h3>
               <p className="text-gray-600 text-sm md:text-base font-medium leading-relaxed">{p.desc}</p>

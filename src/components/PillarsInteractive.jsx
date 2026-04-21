@@ -42,7 +42,7 @@ export default function PillarsInteractive() {
   return (
     <section
       id="pillars"
-      className="relative z-10 py-28 px-6 bg-soft-dawn overflow-hidden"
+      className="relative z-10 py-20 md:py-28 px-5 md:px-6 bg-soft-dawn overflow-hidden"
     >
       <div className="max-w-6xl mx-auto relative z-10">
         <Reveal className="text-center mb-12">

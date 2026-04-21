@@ -1,5 +1,3 @@
-import { Sparkles } from 'lucide-react';
-
 const phrases = [
   'Energize your vibe',
   'Empower your energy',
@@ -15,7 +13,7 @@ export default function Marquee() {
         {items.map((p, i) => (
           <span key={i} className="flex items-center gap-10">
             <span>{p}</span>
-            <Sparkles className="text-white" size={20} />
+            <span className="inline-block w-2 h-2 rounded-full bg-sun/90" />
           </span>
         ))}
       </div>

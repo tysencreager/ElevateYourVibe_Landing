@@ -5,10 +5,10 @@ import Reveal from './Reveal.jsx';
 
 export default function AboutCondensed() {
   return (
-    <section id="about" className="relative z-10 py-28 px-6 bg-gradient-to-br from-orange via-pink to-magenta overflow-hidden">
+    <section id="about" className="relative z-10 py-20 md:py-28 px-5 md:px-6 bg-gradient-to-br from-orange via-pink to-magenta overflow-hidden">
       <Blob tone="sun" size="xl" className="-top-32 -right-20" opacity={35} slow />
       <Blob tone="magenta" size="lg" className="bottom-0 -left-32" opacity={20} />
-      <div className="max-w-6xl mx-auto bento-card p-8 md:p-16 bg-white shadow-2xl relative border-none z-10">
+      <div className="max-w-6xl mx-auto bento-card p-6 sm:p-8 md:p-16 bg-white shadow-2xl relative border-none z-10">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center z-10 relative">
           <Reveal direction="right" className="w-full md:w-5/12">
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl border-4 border-sun">

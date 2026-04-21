@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import AlertBanner from './AlertBanner.jsx';
 import Nav from './Nav.jsx';
 import Footer from './Footer.jsx';
+import LaunchPopup from './LaunchPopup.jsx';
 
 export default function Layout() {
   const { pathname } = useLocation();
@@ -19,6 +20,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <LaunchPopup />
     </div>
   );
 }

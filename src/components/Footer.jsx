@@ -5,7 +5,7 @@ import Sunburst from './Sunburst.jsx';
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-br from-[#3b0a24] via-magenta to-[#7a0e3a] text-white pt-24 pb-10 grain">
+    <footer className="relative overflow-hidden bg-gradient-to-br from-[#3b0a24] via-magenta to-[#7a0e3a] text-white pt-16 md:pt-24 pb-10 grain">
       {/* Shimmer top edge */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true" />
       <Sunburst
@@ -15,7 +15,7 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Top - Brand + newsletter */}
-        <div className="grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-20 pb-14 border-b border-white/10">
+        <div className="grid md:grid-cols-[1.2fr_1fr] gap-10 md:gap-20 pb-12 md:pb-14 border-b border-white/10">
           <div>
             <Link to="/" className="inline-flex items-center gap-4 mb-6 group">
               <img

@@ -5,7 +5,7 @@ import {
   MessageCircleHeart,
   Map,
   Headphones,
-  Sparkle,
+  Sun,
   Gift,
   Feather,
   ArrowRight,
@@ -24,13 +24,13 @@ const itemsLeft = [
 const itemsRight = [
   { icon: <Map />, text: 'The Energize Your Vibe Method + Roadmap', accent: 'sun' },
   { icon: <Headphones />, text: 'Podcasts, Meditations & Spotify Playlist', accent: 'gold' },
-  { icon: <Sparkle />, text: 'Affirmations & Vibe Checks', accent: 'orange' },
+  { icon: <Sun />, text: 'Affirmations & Vibe Checks', accent: 'orange' },
   { icon: <Gift />, text: 'Personalized Welcome Gift in the Mail', accent: 'pink' },
 ];
 
 export default function Inclusions() {
   return (
-    <section className="relative z-10 py-28 px-6 bg-soft-ember overflow-hidden">
+    <section className="relative z-10 py-20 md:py-28 px-5 md:px-6 bg-soft-ember overflow-hidden">
       <Blob tone="pink" size="lg" className="-top-20 right-10" opacity={12} slow />
       <Blob tone="gold" size="md" className="bottom-40 -left-20" opacity={18} />
       <div className="max-w-6xl mx-auto relative z-10">

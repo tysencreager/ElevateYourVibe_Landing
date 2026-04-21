@@ -19,9 +19,9 @@ const defaultCycle = ['sun', 'gold', 'orange', 'pink', 'magenta'];
 
 export default function GradientBarList({ items, className = '', size = 'md' }) {
   const sizes = {
-    sm: 'py-3 px-5 md:py-4 md:px-6 text-base md:text-lg',
-    md: 'py-4 px-6 md:py-5 md:px-8 text-lg md:text-xl',
-    lg: 'py-5 px-7 md:py-6 md:px-10 text-xl md:text-2xl',
+    sm: 'py-3 px-4 md:py-4 md:px-6 text-sm md:text-lg',
+    md: 'py-3.5 px-5 md:py-5 md:px-8 text-base md:text-xl',
+    lg: 'py-4 px-6 md:py-6 md:px-10 text-lg md:text-2xl',
   };
 
   return (

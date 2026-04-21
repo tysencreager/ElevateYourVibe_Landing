@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, MapPin, CheckCircle2, Video, Headphones, Sparkles } from 'lucide-react';
+import { ArrowRight, Calendar, MapPin, CheckCircle2, Video, Headphones, Flower2 } from 'lucide-react';
 import Blob from '../components/Blob.jsx';
 import Sunburst from '../components/Sunburst.jsx';
 
@@ -21,7 +21,7 @@ const eventTypes = [
     image: '/assets/online-sisterhood.png',
   },
   {
-    icon: <Sparkles />,
+    icon: <Flower2 />,
     title: 'Launch Party',
     desc: 'An intentional gathering to celebrate the community coming together.',
     chip: 'In-Person',
@@ -49,14 +49,14 @@ export default function Events() {
   return (
     <>
       {/* HERO */}
-      <section className="relative pt-40 pb-20 md:pt-48 md:pb-24 px-6 bg-animated-warm overflow-hidden grain">
+      <section className="relative pt-32 pb-14 md:pt-48 md:pb-24 px-5 md:px-6 bg-animated-warm overflow-hidden grain">
         <Sunburst
           className="absolute -right-32 -top-32 w-[520px] h-[520px] opacity-20"
           strokeColor="rgba(255,255,255,0.6)"
         />
         <Blob tone="magenta" size="lg" className="-bottom-20 -left-20" opacity={25} slow />
         <div className="max-w-5xl mx-auto relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl font-display text-white leading-tight mb-6 drop-shadow-md">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-display text-white leading-tight mb-5 md:mb-6 drop-shadow-md">
             Where the <span className="font-serif italic text-sun">sisterhood</span> rises together.
           </h1>
           <p className="text-lg md:text-xl text-white/95 font-medium max-w-2xl mx-auto">
@@ -66,7 +66,7 @@ export default function Events() {
       </section>
 
       {/* PLACEHOLDER CALENDAR */}
-      <section className="relative py-24 px-6 bg-soft-dawn overflow-hidden">
+      <section className="relative py-20 md:py-24 px-5 md:px-6 bg-soft-dawn overflow-hidden">
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="bento-card glass border-2 border-dashed border-pink/30 p-10 md:p-16 text-center mb-16">
             <Calendar className="text-pink mx-auto mb-6" size={56} />
@@ -127,7 +127,7 @@ export default function Events() {
       </section>
 
       {/* RETREAT CTA */}
-      <section className="relative py-24 px-6 bg-bg">
+      <section className="relative py-20 md:py-24 px-5 md:px-6 bg-bg">
         <div className="max-w-6xl mx-auto bento-card p-0 bg-magenta text-white relative overflow-hidden border-none min-h-[420px] group">
           <img
             src="/assets/womens-retreat.png"

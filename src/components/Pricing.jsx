@@ -31,13 +31,13 @@ const perks = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="relative z-10 py-28 bg-animated-warm overflow-hidden grain">
+    <section id="pricing" className="relative z-10 py-20 md:py-28 bg-animated-warm overflow-hidden grain">
       <Sunburst
         className="absolute -right-48 -top-48 w-[640px] h-[640px] opacity-20"
         strokeColor="rgba(255,255,255,0.6)"
       />
       <Blob tone="magenta" size="xl" className="bottom-0 -left-40" opacity={25} slow />
-      <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
+      <div className="max-w-5xl mx-auto px-5 md:px-6 text-center relative z-10">
         <h2 className="text-4xl md:text-7xl font-display mb-6 text-white drop-shadow-md leading-tight">
           Reserve your spot <br className="hidden md:block" />
           <span className="font-serif italic text-sun">in the community.</span>
@@ -46,7 +46,7 @@ export default function Pricing() {
           Say yes to coming back home to yourself. Stop figuring it out alone.
         </p>
 
-        <div className="bento-card p-8 md:p-16 bg-white border-none relative max-w-2xl mx-auto text-left shadow-2xl">
+        <div className="bento-card p-6 sm:p-8 md:p-16 bg-white border-none relative max-w-2xl mx-auto text-left shadow-2xl">
           <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-magenta text-sun text-xs md:text-sm font-bold uppercase tracking-widest py-3 px-6 md:px-8 rounded-full shadow-xl whitespace-nowrap border-2 border-sun">
             First 50 Members Only
           </div>

@@ -25,9 +25,9 @@ body {
   margin: 0;
 }
 
-/* Editorial / display type */
+/* Editorial / display type - Recoleta only, untouched */
 .font-display {
-  font-family: 'Recoleta', 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  font-family: 'Recoleta', Georgia, serif;
   letter-spacing: -0.01em;
 }
 
