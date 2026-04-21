@@ -253,16 +253,6 @@ svg.lucide {
   transform: scale(1.06);
 }
 
-/* Kenburns-style slow pan — good for hero photos */
-@keyframes kenburns {
-  0% { transform: scale(1) translate(0, 0); }
-  50% { transform: scale(1.05) translate(-1%, -1%); }
-  100% { transform: scale(1) translate(0, 0); }
-}
-.kenburns {
-  animation: kenburns 22s ease-in-out infinite;
-}
-
 /* Button glow pulse */
 @keyframes glow-pulse {
   0%, 100% { box-shadow: 0 10px 30px rgba(226, 46, 100, 0.35); }

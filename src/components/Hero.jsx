@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import Reveal from './Reveal.jsx';
 
 export default function Hero() {
   return (
     <section className="relative z-10 pt-40 pb-16 md:pt-72 md:pb-32 px-5 md:px-6 overflow-hidden bg-sun">
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <video
-          className="absolute inset-0 w-full h-full object-cover kenburns"
+          className="absolute inset-0 w-full h-full object-cover"
           src="/assets/eyv-header-video.mp4"
           autoPlay
           loop
@@ -20,25 +19,18 @@ export default function Hero() {
         <div className="absolute inset-0 hero-video-overlay" />
         {/* Dark-to-light radial vignette centered on the text for contrast */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(60,10,30,0.32)_0%,rgba(60,10,30,0.12)_45%,transparent_75%)]" />
-        <div className="absolute top-[-20%] left-[-10%] w-[60vw] h-[60vw] bg-orange rounded-full mix-blend-multiply filter blur-[80px] opacity-30 animate-pulse"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-pink rounded-full mix-blend-multiply filter blur-[100px] opacity-25"></div>
       </div>
 
       <div className="max-w-5xl mx-auto flex flex-col items-center text-center relative z-10">
-        <Reveal direction="down" className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-white font-bold text-[10px] md:text-[11px] uppercase tracking-[0.3em] mb-6 border border-white/30 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-sun" />
-          A Global Sisterhood Rising Together
-        </Reveal>
-
         <h1
-          className="text-[2.2rem] sm:text-4xl md:text-[5.25rem] leading-[0.98] mb-5 md:mb-6 max-w-5xl font-display font-medium text-white"
+          className="text-[2.2rem] sm:text-4xl md:text-[5.25rem] leading-[1.08] md:leading-[1.05] mb-5 md:mb-6 max-w-5xl font-display font-medium text-white"
           style={{
             textShadow:
               '0 2px 8px rgba(0,0,0,0.5), 0 4px 24px rgba(60,10,30,0.6), 0 1px 2px rgba(0,0,0,0.4)',
           }}
         >
           Empower your energy.
-          <span className="block mt-1 md:mt-1.5">
+          <span className="block mt-2 md:mt-3">
             <span className="relative inline-block italic font-serif text-white"
               style={{
                 backgroundImage:
