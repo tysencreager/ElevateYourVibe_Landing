@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Quote } from 'lucide-react';
 import { pillars, pillarColorClasses } from '../data/pillars.js';
+import Blob from '../components/Blob.jsx';
+import Sunburst from '../components/Sunburst.jsx';
 
 const quotes = [
   '“I want what’s introduced to speak to the soul.”',
@@ -14,7 +16,8 @@ export default function About() {
     <>
       {/* HERO */}
       <section className="relative pt-40 pb-20 md:pt-48 md:pb-28 px-6 bg-gradient-to-br from-sun via-gold/40 to-orange/60 overflow-hidden">
-        <div className="absolute top-[-15%] left-[-10%] w-[50vw] h-[50vw] bg-pink rounded-full mix-blend-multiply filter blur-[100px] opacity-25"></div>
+        <Blob tone="pink" size="xl" className="-top-20 -left-20" opacity={20} slow />
+        <Blob tone="magenta" size="lg" className="-bottom-20 right-10" opacity={15} />
         <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2">
             <div className="inline-block px-4 py-1.5 bg-magenta text-sun rounded-full text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
@@ -34,7 +37,7 @@ export default function About() {
             </Link>
           </div>
           <div className="w-full md:w-1/2 flex justify-center">
-            <div className="relative rounded-3xl overflow-hidden aspect-[3/4] max-w-sm w-full shadow-2xl border-4 border-white rotate-2">
+            <div className="relative rounded-3xl overflow-hidden aspect-[3/4] max-w-sm w-full shadow-2xl border-4 border-white">
               <img
                 src="/assets/jenn-headshot.png"
                 alt="Jenn — Founder of Energize Your Vibe"
@@ -134,8 +137,13 @@ export default function About() {
       </section>
 
       {/* FULL 7 PILLARS */}
-      <section className="relative py-24 px-6 bg-magenta text-white">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-24 px-6 bg-gradient-to-br from-magenta via-[#8A1249] to-[#3b0a24] text-white overflow-hidden">
+        <Sunburst
+          className="absolute -right-40 -top-40 w-[600px] h-[600px] opacity-15"
+          strokeColor="rgba(253,224,139,0.8)"
+        />
+        <Blob tone="pink" size="xl" className="-bottom-40 -left-40" opacity={25} slow />
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-1.5 bg-sun text-magenta rounded-full text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
               The 7 Pillars

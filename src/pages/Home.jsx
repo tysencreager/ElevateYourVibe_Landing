@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero.jsx';
 import Marquee from '../components/Marquee.jsx';
 import PowerOfYes from '../components/PowerOfYes.jsx';
-import PillarsCondensed from '../components/PillarsCondensed.jsx';
+import PillarsInteractive from '../components/PillarsInteractive.jsx';
 import AboutCondensed from '../components/AboutCondensed.jsx';
 import Inclusions from '../components/Inclusions.jsx';
 import EventsTeaser from '../components/EventsTeaser.jsx';
@@ -25,7 +25,7 @@ export default function Home() {
       <Hero />
       <Marquee />
       <PowerOfYes />
-      <PillarsCondensed />
+      <PillarsInteractive />
       <AboutCondensed />
       <Inclusions />
       <EventsTeaser />

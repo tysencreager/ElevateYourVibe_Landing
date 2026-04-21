@@ -21,7 +21,7 @@ export default function Hero() {
       </div>
 
       <div className="max-w-5xl mx-auto flex flex-col items-center text-center relative z-10">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-magenta text-white font-bold text-xs uppercase tracking-widest mb-8 shadow-lg -rotate-2">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-magenta text-white font-bold text-xs uppercase tracking-widest mb-8 shadow-lg">
           <Sparkles size={16} className="text-sun" />
           A Global Sisterhood Rising Together
         </div>

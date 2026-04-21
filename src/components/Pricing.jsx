@@ -1,4 +1,6 @@
 import { Check } from 'lucide-react';
+import Blob from './Blob.jsx';
+import Sunburst from './Sunburst.jsx';
 
 const perks = [
   {
@@ -29,8 +31,13 @@ const perks = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="relative z-10 py-28 bg-warm-gradient">
-      <div className="max-w-5xl mx-auto px-6 text-center">
+    <section id="pricing" className="relative z-10 py-28 bg-animated-warm overflow-hidden grain">
+      <Sunburst
+        className="absolute -right-48 -top-48 w-[640px] h-[640px] opacity-20"
+        strokeColor="rgba(255,255,255,0.6)"
+      />
+      <Blob tone="magenta" size="xl" className="bottom-0 -left-40" opacity={25} slow />
+      <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
         <h2 className="text-4xl md:text-7xl font-display mb-6 text-white drop-shadow-md">
           Reserve your spot in the community.
         </h2>

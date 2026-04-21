@@ -10,26 +10,29 @@ import {
   Gift,
   ArrowRight,
 } from 'lucide-react';
+import Blob from './Blob.jsx';
 
 const items = [
-  { icon: <Video />, text: "Daily 'Lives for Vibes'", bg: 'bg-pink text-white' },
-  { icon: <Heart />, text: 'Cheerleader in your pocket', bg: 'bg-sun text-magenta' },
-  { icon: <Users />, text: 'Monthly Group Call', bg: 'bg-magenta text-white' },
-  { icon: <MessageCircleHeart />, text: 'Private Facebook Community', bg: 'bg-gold text-white' },
-  { icon: <Map />, text: 'The EYV Method + Roadmap', bg: 'bg-orange text-white' },
-  { icon: <Headphones />, text: 'Podcasts, Meditations & Spotify Playlist', bg: 'bg-pink text-white' },
-  { icon: <Sparkles />, text: 'Affirmations & Vibe Checks', bg: 'bg-sun text-magenta' },
+  { icon: <Video />, text: "Daily 'Lives for Vibes'", bg: 'bg-gradient-to-br from-pink to-magenta text-white' },
+  { icon: <Heart />, text: 'Cheerleader in your pocket', bg: 'bg-gradient-to-br from-sun to-gold/70 text-magenta' },
+  { icon: <Users />, text: 'Monthly Group Call', bg: 'bg-gradient-to-br from-magenta to-[#6a0e33] text-white' },
+  { icon: <MessageCircleHeart />, text: 'Private Facebook Community', bg: 'bg-gradient-to-br from-gold to-orange text-white' },
+  { icon: <Map />, text: 'The EYV Method + Roadmap', bg: 'bg-gradient-to-br from-orange to-pink text-white' },
+  { icon: <Headphones />, text: 'Podcasts, Meditations & Spotify Playlist', bg: 'bg-gradient-to-br from-pink via-orange to-gold text-white' },
+  { icon: <Sparkles />, text: 'Affirmations & Vibe Checks', bg: 'bg-gradient-to-br from-sun to-orange/60 text-magenta' },
   {
     icon: <Gift />,
     text: 'Personalized Welcome Gift in the Mail',
-    bg: 'bg-gradient-to-br from-magenta to-pink text-white',
+    bg: 'bg-animated-warm text-white',
   },
 ];
 
 export default function Inclusions() {
   return (
-    <section className="relative z-10 py-28 px-6 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative z-10 py-28 px-6 bg-soft-ember overflow-hidden">
+      <Blob tone="pink" size="lg" className="-top-20 right-10" opacity={12} slow />
+      <Blob tone="gold" size="md" className="bottom-40 -left-20" opacity={18} />
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-display mb-6 text-gray-900">
             Everything inside your membership.
@@ -54,7 +57,7 @@ export default function Inclusions() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-16">
-          <div className="bento-card bg-bg border-2 border-gold/30 p-8 flex gap-6 items-center">
+          <div className="bento-card glass border border-gold/30 p-8 flex gap-6 items-center">
             <img
               src="/assets/self-care-kit.png"
               alt="Self care kit"
@@ -71,7 +74,7 @@ export default function Inclusions() {
             </div>
           </div>
 
-          <div className="bento-card bg-bg border-2 border-pink/20 p-8 flex gap-6 items-center">
+          <div className="bento-card glass border border-pink/20 p-8 flex gap-6 items-center">
             <div className="w-28 h-28 rounded-2xl bg-brand-gradient flex items-center justify-center shrink-0 shadow-md">
               <Sparkles size={44} className="text-white" />
             </div>

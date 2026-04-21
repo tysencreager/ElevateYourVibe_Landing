@@ -3,9 +3,9 @@ import { ArrowRight, CheckCircle2, MapPin } from 'lucide-react';
 
 export default function EventsTeaser() {
   return (
-    <section id="events" className="relative z-10 py-28 bg-bg">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row gap-8">
-        <div className="w-full lg:w-1/2 bento-card p-10 md:p-14 bg-white border-2 border-gray-100">
+    <section id="events" className="relative z-10 py-28 bg-soft-dawn overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row gap-8 relative z-10">
+        <div className="w-full lg:w-1/2 bento-card p-10 md:p-14 glass border border-gold/20">
           <div className="inline-block px-4 py-1.5 bg-sun text-magenta rounded-full text-xs font-bold uppercase tracking-widest mb-8 shadow-sm">
             Upcoming
           </div>
@@ -45,9 +45,9 @@ export default function EventsTeaser() {
           <img
             src="/assets/womens-retreat.png"
             alt="Women's retreat in Southern Utah"
-            className="absolute inset-0 w-full h-full object-cover opacity-55 group-hover:opacity-70 transition-opacity duration-700"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-tr from-magenta/90 via-magenta/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-magenta/75 via-magenta/25 to-transparent" />
 
           <div className="relative z-10 flex flex-col h-full justify-between p-10 md:p-14">
             <div>

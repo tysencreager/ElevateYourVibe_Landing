@@ -58,8 +58,119 @@ body {
 .hero-video-overlay {
   background: linear-gradient(
     135deg,
-    rgba(253, 224, 139, 0.55) 0%,
-    rgba(248, 162, 50, 0.45) 40%,
-    rgba(226, 46, 100, 0.45) 100%
+    rgba(253, 224, 139, 0.45) 0%,
+    rgba(248, 162, 50, 0.35) 40%,
+    rgba(226, 46, 100, 0.35) 100%
   );
+}
+
+/* -- Animated conic gradient for hero / feature cards -- */
+@keyframes gradient-drift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-animated-warm {
+  background: linear-gradient(
+    130deg,
+    #FDE08B 0%,
+    #F8A232 25%,
+    #F26B38 50%,
+    #E22E64 75%,
+    #B71556 100%
+  );
+  background-size: 300% 300%;
+  animation: gradient-drift 18s ease infinite;
+}
+
+/* -- Soft section gradients -- */
+.bg-soft-dawn {
+  background: radial-gradient(ellipse at top left, rgba(253, 224, 139, 0.45), transparent 55%),
+    radial-gradient(ellipse at bottom right, rgba(226, 46, 100, 0.12), transparent 60%),
+    #FAFAFA;
+}
+
+.bg-soft-sunset {
+  background: radial-gradient(ellipse at 15% 20%, rgba(248, 162, 50, 0.35), transparent 55%),
+    radial-gradient(ellipse at 85% 80%, rgba(183, 21, 86, 0.2), transparent 60%),
+    #fff;
+}
+
+.bg-soft-ember {
+  background: linear-gradient(160deg, #fff 0%, #FDE08B33 45%, #F26B3820 100%);
+}
+
+.bg-soft-rose {
+  background: radial-gradient(ellipse at 80% 10%, rgba(226, 46, 100, 0.18), transparent 60%),
+    radial-gradient(ellipse at 10% 90%, rgba(248, 162, 50, 0.25), transparent 55%),
+    #FAFAFA;
+}
+
+/* -- Golden shimmer divider line -- */
+.shimmer-divider {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(248, 162, 50, 0.3) 20%,
+    rgba(253, 224, 139, 0.9) 50%,
+    rgba(248, 162, 50, 0.3) 80%,
+    transparent 100%
+  );
+}
+
+/* -- Drifting floating blob (used by Blob component) -- */
+@keyframes blob-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.08); }
+  66% { transform: translate(-25px, 25px) scale(0.95); }
+}
+
+.blob-drift {
+  animation: blob-drift 14s ease-in-out infinite;
+}
+
+.blob-drift-slow {
+  animation: blob-drift 22s ease-in-out infinite reverse;
+}
+
+/* -- Subtle grain/noise overlay for luxury feel -- */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.8'/></svg>");
+}
+
+/* -- Fade up on reveal -- */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* -- Slow rotation for mandala/sunburst -- */
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotate-slow {
+  animation: rotate-slow 60s linear infinite;
+}
+
+/* -- Glass card -- */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }

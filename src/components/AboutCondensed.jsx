@@ -1,19 +1,22 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import Blob from './Blob.jsx';
 
 export default function AboutCondensed() {
   return (
-    <section id="about" className="relative z-10 py-28 px-6 bg-orange">
-      <div className="max-w-6xl mx-auto bento-card p-8 md:p-16 bg-white shadow-2xl relative border-none">
+    <section id="about" className="relative z-10 py-28 px-6 bg-gradient-to-br from-orange via-pink to-magenta overflow-hidden">
+      <Blob tone="sun" size="xl" className="-top-32 -right-20" opacity={35} slow />
+      <Blob tone="magenta" size="lg" className="bottom-0 -left-32" opacity={20} />
+      <div className="max-w-6xl mx-auto bento-card p-8 md:p-16 bg-white shadow-2xl relative border-none z-10">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center z-10 relative">
           <div className="w-full md:w-5/12">
-            <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl border-4 border-sun -rotate-3">
+            <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl border-4 border-sun">
               <img
                 src="/assets/jenn-headshot.png"
                 alt="Jenn — Founder of Energize Your Vibe"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute bottom-6 left-6 bg-pink text-white px-6 py-3 rounded-xl font-display text-2xl shadow-lg rotate-3">
+              <div className="absolute bottom-6 left-6 bg-pink text-white px-6 py-3 rounded-xl font-display text-2xl shadow-lg">
                 Meet Jenn
               </div>
             </div>

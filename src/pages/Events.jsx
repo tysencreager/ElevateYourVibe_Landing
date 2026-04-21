@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, MapPin, CheckCircle2, Video, Headphones, Sparkles } from 'lucide-react';
+import Blob from '../components/Blob.jsx';
+import Sunburst from '../components/Sunburst.jsx';
 
 const eventTypes = [
   {
@@ -50,7 +52,12 @@ export default function Events() {
   return (
     <>
       {/* HERO */}
-      <section className="relative pt-40 pb-20 md:pt-48 md:pb-24 px-6 bg-gradient-to-br from-pink via-orange to-gold overflow-hidden">
+      <section className="relative pt-40 pb-20 md:pt-48 md:pb-24 px-6 bg-animated-warm overflow-hidden grain">
+        <Sunburst
+          className="absolute -right-32 -top-32 w-[520px] h-[520px] opacity-20"
+          strokeColor="rgba(255,255,255,0.6)"
+        />
+        <Blob tone="magenta" size="lg" className="-bottom-20 -left-20" opacity={25} slow />
         <div className="max-w-5xl mx-auto relative z-10 text-center">
           <div className="inline-block px-4 py-1.5 bg-white/90 text-magenta rounded-full text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
             Upcoming Events
@@ -65,9 +72,9 @@ export default function Events() {
       </section>
 
       {/* PLACEHOLDER CALENDAR */}
-      <section className="relative py-24 px-6 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="bento-card bg-bg border-2 border-dashed border-pink/30 p-10 md:p-16 text-center mb-16">
+      <section className="relative py-24 px-6 bg-soft-dawn overflow-hidden">
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="bento-card glass border-2 border-dashed border-pink/30 p-10 md:p-16 text-center mb-16">
             <Calendar className="text-pink mx-auto mb-6" size={56} />
             <h2 className="text-3xl md:text-5xl font-display text-gray-900 mb-4">
               Full calendar <i className="text-pink">coming soon.</i>
@@ -119,13 +126,13 @@ export default function Events() {
 
       {/* RETREAT CTA */}
       <section className="relative py-24 px-6 bg-bg">
-        <div className="max-w-6xl mx-auto bento-card p-0 bg-magenta text-white relative overflow-hidden border-none min-h-[420px]">
+        <div className="max-w-6xl mx-auto bento-card p-0 bg-magenta text-white relative overflow-hidden border-none min-h-[420px] group">
           <img
             src="/assets/womens-retreat.png"
             alt="Southern Utah retreat"
-            className="absolute inset-0 w-full h-full object-cover opacity-55"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-tr from-magenta/90 via-magenta/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-magenta/75 via-magenta/25 to-transparent" />
           <div className="relative z-10 p-10 md:p-16 max-w-2xl">
             <MapPin size={40} className="text-sun mb-6" />
             <h2 className="text-4xl md:text-6xl font-display italic mb-4">
