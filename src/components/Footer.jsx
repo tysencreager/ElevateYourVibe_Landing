@@ -1,10 +1,36 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Instagram, Facebook, ArrowUpRight } from 'lucide-react';
 import Sunburst from './Sunburst.jsx';
-import { CHECKOUT_URL } from '../data/links.js';
+import { CHECKOUT_URL, CONTACT_EMAIL, INSTAGRAM_URL } from '../data/links.js';
+
+const encode = (data) =>
+  Object.keys(data)
+    .map((k) => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]))
+    .join('&');
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('idle');
+
+  async function handleSubscribe(e) {
+    e.preventDefault();
+    if (!email || status === 'submitting') return;
+    setStatus('submitting');
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'subscribe', email }),
+      });
+      setStatus('success');
+      setEmail('');
+    } catch {
+      setStatus('error');
+    }
+  }
+
   return (
     <footer className="relative overflow-hidden bg-gradient-to-br from-[#3b0a24] via-magenta to-[#7a0e3a] text-white pt-16 md:pt-24 pb-10 grain">
       {/* Shimmer top edge */}
@@ -44,28 +70,56 @@ export default function Footer() {
               A little inspiration, <i className="text-sun">delivered gently.</i>
             </h3>
             <form
-              onSubmit={(e) => e.preventDefault()}
+              name="subscribe"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubscribe}
               className="flex flex-col sm:flex-row gap-3"
             >
+              <input type="hidden" name="form-name" value="subscribe" />
+              <p className="hidden">
+                <label>
+                  Don’t fill this out: <input name="bot-field" />
+                </label>
+              </p>
               <label htmlFor="footer-email" className="sr-only">
                 Email
               </label>
               <input
                 id="footer-email"
+                name="email"
                 type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
                 className="flex-1 px-5 py-3.5 rounded-full bg-white/10 border border-white/30 text-white placeholder:text-white/50 focus:outline-none focus:border-sun focus:bg-white/15 backdrop-blur-sm font-medium"
               />
               <button
                 type="submit"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-sun text-magenta font-bold uppercase tracking-widest text-xs hover:bg-white transition-colors shadow-lg"
+                disabled={status === 'submitting'}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-sun text-magenta font-bold uppercase tracking-widest text-xs hover:bg-white transition-colors shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Subscribe <ArrowUpRight size={16} strokeWidth={1.75} />
+                {status === 'submitting' ? 'Sending…' : 'Subscribe'}
+                <ArrowUpRight size={16} strokeWidth={1.75} />
               </button>
             </form>
-            <p className="mt-3 text-xs text-white/60 font-medium">
-              No spam. Opt-in only. Unsubscribe anytime.
-            </p>
+            {status === 'success' && (
+              <p className="mt-3 text-xs text-sun font-bold">
+                Thank you! You’re on the list.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="mt-3 text-xs text-sun font-bold">
+                Something went wrong. Please email {CONTACT_EMAIL} instead.
+              </p>
+            )}
+            {status !== 'success' && status !== 'error' && (
+              <p className="mt-3 text-xs text-white/60 font-medium">
+                No spam. Opt-in only. Unsubscribe anytime.
+              </p>
+            )}
           </div>
         </div>
 
@@ -88,12 +142,12 @@ export default function Footer() {
             </p>
             <ul className="space-y-3 text-white/80 font-medium">
               <li>
-                <a href="mailto:hello@energizeyourvibe.com" className="inline-flex items-center gap-2 hover:text-sun transition-colors">
-                  <Mail size={16} strokeWidth={1.5} /> hello@energizeyourvibe.com
+                <a href={`mailto:${CONTACT_EMAIL}`} className="inline-flex items-center gap-2 hover:text-sun transition-colors">
+                  <Mail size={16} strokeWidth={1.5} /> {CONTACT_EMAIL}
                 </a>
               </li>
               <li>
-                <a href="#" className="inline-flex items-center gap-2 hover:text-sun transition-colors">
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-sun transition-colors">
                   <Instagram size={16} strokeWidth={1.5} /> Instagram
                 </a>
               </li>
@@ -109,9 +163,9 @@ export default function Footer() {
               Good to know
             </p>
             <ul className="space-y-3 text-white/80 font-medium">
-              <li><a href="#" className="hover:text-sun transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-sun transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-sun transition-colors">Cookies</a></li>
+              <li><Link to="/terms" className="hover:text-sun transition-colors">Terms of Service</Link></li>
+              <li><Link to="/privacy" className="hover:text-sun transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/cookies" className="hover:text-sun transition-colors">Cookies</Link></li>
             </ul>
           </div>
         </div>
