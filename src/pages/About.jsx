@@ -83,7 +83,7 @@ export default function About() {
           <div className="grid md:grid-cols-[1fr_minmax(260px,340px)] gap-10 lg:gap-16">
             <article className="space-y-6 text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
               <p className="first-letter:font-display first-letter:text-6xl first-letter:text-pink first-letter:float-left first-letter:mr-3 first-letter:leading-[0.85] first-letter:mt-1">
-                Jenn Davis is a certified Holistic Health Practitioner specializing in energy and wellness, trained in the energetics of the body and the subconscious. Her work blends science-backed coaching with deep emotional and energetic support - helping individuals regulate their nervous system, shift their mindset, and create lasting change from within.
+                Jenn Davis is a certified Holistic Health Practitioner specializing in energy and wellness, trained in the energetics of the body and the subconscious. Her work blends science-backed coaching with deep emotional and energetic support - helping individuals come back home to self and heart, regulate their nervous system, shift their mindset, and create lasting change from within.
               </p>
               <p>
                 Jenn has spent decades committed to personal growth, healing, and understanding what it truly means to live a fulfilling life. She is deeply passionate about supporting people in remembering who they are - that they matter, are seen, heard, and deeply loved. Creating space for others to experience peace, clarity, and genuine joy is not just her work, it is her life’s mission and passion.
@@ -101,7 +101,7 @@ export default function About() {
               </figure>
 
               <p>
-                Her journey has been shaped by both profound love and deep loss. Widowed at the age of 22 and left to raise her young child, Jenn faced one of life’s most defining moments early on. In the midst of grief and uncertainty, she made a choice to keep going. That choice led her into years of self-development, faith, healing work, and deep inner exploration.
+                Her journey has been shaped by both profound love and deep loss. Widowed at the age of 22 and left to raise her young child, Jenn faced one of life’s most defining moments early on. In the midst of grief and uncertainty, she made a choice to keep going. That choice led her into years of self-development, faith, healing work, deep inner exploration, and surrendering to allow God to guide her efforts and create the miracles she desired.
               </p>
               <p>
                 Throughout her life, Jenn has also experienced the heartbreak of losing two of her childhood best friends to cancer, and has been impacted by the loss of loved ones through suicide. She has walked alongside friends and family members navigating mental health challenges and addiction, giving her a deep, personal understanding of the weight many people carry. These experiences have shaped her perspective, strengthening her compassion and reinforcing her belief in the importance of connection, support, and truly valuing life.
@@ -110,7 +110,7 @@ export default function About() {
               <blockquote className="relative my-10 pl-8 md:pl-10 py-6 border-l-4 border-pink bg-white/60 rounded-r-2xl">
                 <Quote className="absolute -top-3 -left-4 text-pink bg-white rounded-full p-1" size={32} />
                 <p className="font-display italic text-2xl md:text-3xl text-magenta leading-snug">
-                  She didn’t just learn the work - she embodied it, and continues to do so.
+                  She didn’t just learn the work. She lives it and continues to embody it. No one is exempt &amp; there’s no way around it. We are all human.
                 </p>
               </blockquote>
 
@@ -124,7 +124,7 @@ export default function About() {
                 Jenn is deeply rooted in her relationship with God and her Savior. While this is central to her life, she honors and respects each individual’s beliefs and personal journey. She believes love is the foundation of healing, and values the unique light within every person.
               </p>
               <p>
-                She has been married to her sweetheart for 24 years and is the proud mother of three adult children. Originally from Washington State, she has called Utah home for the past 20 years - she loves Utah and its seasons, the mountains, water, and adventure.
+                She has been married to her sweetheart going on 24 years. She is grateful to have found love again, after such a loss, and can testify that anything is possible. She is the proud mother of 3 adult children (her baby just turned 18 and is graduating HS - talk about new bittersweet chapters!). Originally from Washington State, she has called Utah home for the past 20 years - she loves Utah and its seasons, the mountains, water, and adventure.
               </p>
             </article>
 
