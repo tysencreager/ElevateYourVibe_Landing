@@ -85,12 +85,6 @@ export default function Cookies() {
         Questions about our use of cookies can be sent to{' '}
         <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
       </p>
-
-      <p className="text-sm text-gray-500 mt-10">
-        <strong>Note:</strong> This page is provided for general informational purposes
-        and does not constitute legal advice. Please have this Policy reviewed by a
-        qualified attorney before relying on it.
-      </p>
     </LegalLayout>
   );
 }
