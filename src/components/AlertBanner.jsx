@@ -5,7 +5,7 @@ export default function AlertBanner() {
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sun opacity-75"></span>
         <span className="relative inline-flex rounded-full h-3 w-3 bg-sun"></span>
       </span>
-      <span>Summer Retreat in Southern Utah! Limited spots. Member price extremely discounted.</span>
+      <span>Fall Retreat in Southern Utah! Option to purchase coming soon. Member price extremely discounted.</span>
     </div>
   );
 }

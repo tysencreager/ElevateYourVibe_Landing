@@ -10,9 +10,6 @@ export default function EventsTeaser() {
           <h2 className="text-4xl md:text-5xl font-display mb-6 text-gray-900 leading-tight">
             Calls, gatherings &amp; <span className="font-serif italic text-pink font-semibold">moments to rise together.</span>
           </h2>
-          <p className="text-gray-600 mb-8 text-lg font-medium">
-            Primarily online — with the occasional in-person moment that brings the sisterhood together.
-          </p>
           <ul className="space-y-3 text-gray-700 font-medium mb-10">
             <li className="flex items-center gap-3">
               <CheckCircle2 className="text-pink shrink-0" size={20} />
@@ -20,11 +17,19 @@ export default function EventsTeaser() {
             </li>
             <li className="flex items-center gap-3">
               <CheckCircle2 className="text-pink shrink-0" size={20} />
+              Monthly 7 Pillar support &amp; growth calls with expert coaches
+            </li>
+            <li className="flex items-center gap-3">
+              <CheckCircle2 className="text-pink shrink-0" size={20} />
               Daily Lives for Vibes
             </li>
             <li className="flex items-center gap-3">
               <CheckCircle2 className="text-pink shrink-0" size={20} />
-              Healing soundbaths & meditations
+              Weekly uplifting texts for inspiration &amp; motivation
+            </li>
+            <li className="flex items-center gap-3">
+              <CheckCircle2 className="text-pink shrink-0" size={20} />
+              Healing soundbaths &amp; meditations
             </li>
             <li className="flex items-center gap-3">
               <CheckCircle2 className="text-pink shrink-0" size={20} />
@@ -50,7 +55,7 @@ export default function EventsTeaser() {
           <div className="relative z-10 flex flex-col h-full justify-between p-7 md:p-14">
             <div>
               <MapPin size={40} className="text-sun mb-6" />
-              <h3 className="text-5xl md:text-6xl font-display italic mb-3">Summer Retreat</h3>
+              <h3 className="text-5xl md:text-6xl font-display italic mb-3">Fall Retreat</h3>
               <h4 className="text-sm font-bold tracking-widest text-sun mb-6 uppercase bg-white/10 inline-block px-4 py-2 rounded-lg backdrop-blur-sm">
                 Southern Utah
               </h4>
@@ -65,6 +70,12 @@ export default function EventsTeaser() {
               </p>
               <p className="font-bold flex items-center gap-3">
                 <CheckCircle2 size={20} className="text-sun" /> Limited spots available
+              </p>
+              <p className="font-bold flex items-center gap-3">
+                <CheckCircle2 size={20} className="text-sun" /> Option to purchase coming soon
+              </p>
+              <p className="text-white/90 text-sm font-medium mt-2">
+                More details coming soon.
               </p>
             </div>
           </div>

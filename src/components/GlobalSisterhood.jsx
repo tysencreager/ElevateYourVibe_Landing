@@ -3,8 +3,8 @@ import Blob from './Blob.jsx';
 import Reveal from './Reveal.jsx';
 
 const pillars = [
-  { label: 'Online Haven', desc: 'Daily lives, monthly calls, and a library of tools — from wherever you are.' },
-  { label: 'In-Person Magic', desc: 'Select gatherings, retreats, and local spaces that bring us together.' },
+  { label: 'Online Haven', desc: 'Select gatherings, events, soulful service, retreats and local spaces that bring us together.' },
+  { label: 'In-Person Magic', desc: 'Select gatherings, events, soulful service, retreats and local spaces that bring us together.' },
   { label: 'Truly Personal', desc: 'We know your name. We root for you. We genuinely care.' },
 ];
 
@@ -25,7 +25,7 @@ export default function GlobalSisterhood() {
             Connection <i className="text-gradient">without borders.</i>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 font-medium leading-relaxed">
-            Primarily online, with select in-person moments that bring us together. Wherever you are in the world, there’s a seat for you at this table.
+            Join from wherever you are, and step into connection, both online and in person as our community expands.
           </p>
         </Reveal>
 

@@ -38,7 +38,7 @@ export const pillars = [
     subtitle: 'Physical Health & Energy',
     tagline: 'Your body is your sacred vessel.',
     short:
-      'Taking care of your body in a way that supports your energy. Food, movement, rest, hydration — the simple things that make a big difference.',
+      'Taking care of your body in a way that supports your energy. Food, movement, rest, hydration - the simple things that make a big difference.',
     long:
       'Taking care of your body in a way that supports your energy. Food, movement, rest, hydration. Simple things that make a big difference. This is about listening to your body and giving it what it needs to feel strong, clear, and supported. Your body is your sacred vessel. It homes your body, mind and spirit. Fuel reminds us to treat it with love.',
     color: 'gold',
