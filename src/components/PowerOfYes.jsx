@@ -3,7 +3,7 @@ import Reveal from './Reveal.jsx';
 
 export default function PowerOfYes() {
   return (
-    <section className="relative z-10 py-20 md:py-28 px-5 md:px-6 bg-soft-rose overflow-hidden">
+    <section className="relative z-10 py-20 md:py-28 px-5 md:px-6 bg-white overflow-hidden">
       <Blob tone="pink" size="xl" className="-top-40 -left-40" opacity={15} slow />
       <Blob tone="gold" size="lg" className="top-1/3 -right-40" opacity={18} />
       <div className="max-w-6xl mx-auto relative z-10">
@@ -13,7 +13,7 @@ export default function PowerOfYes() {
             <span className="font-serif italic text-pink font-semibold">say YES to yourself:</span>
           </h2>
           <p className="text-gray-600 text-lg md:text-xl max-w-md font-medium leading-relaxed">
-            Leave survival mode behind. This is everything you stand to gain when you finally prioritize your own energy.
+            You leave any heaviness behind and feel empowered to raise your energy, own your worth, and move through life differently in a way that feels like you can be yourself.
           </p>
         </Reveal>
 

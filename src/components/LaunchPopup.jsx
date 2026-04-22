@@ -96,19 +96,19 @@ export default function LaunchPopup() {
             id="launch-popup-title"
             className="font-display text-3xl sm:text-4xl leading-[1.05] mb-4"
           >
-            Step into the sisterhood — <span className="font-serif italic text-sun">at the launch rate.</span>
+            Step into the sisterhood, <span className="font-serif italic text-sun">at the Beta Vibe rate.</span>
           </h2>
 
           <p className="text-white/95 text-sm sm:text-base font-medium leading-relaxed mb-6">
-            Energize Your Vibe opens its doors in <span className="font-bold text-sun">May 2026</span>. The first 50 members lock in the introductory <span className="font-bold text-sun">$88/mo</span> rate for a full year — once those spots are gone, pricing goes up.
+            Energize Your Vibe opens its doors in <span className="font-bold text-sun">May 2026</span>. The first 50 members lock in the introductory <span className="font-bold text-sun">$88/mo</span> Beta Vibe rate <span className="font-bold text-sun">for life</span>. Once those spots are gone, pricing goes up.
           </p>
 
           <div className="bg-white/10 border border-white/25 rounded-2xl px-5 py-4 mb-7 backdrop-blur-sm">
             <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-sun mb-1">
-              Early-bird bonus
+              Beta Vibe Pricing
             </p>
             <p className="text-sm sm:text-base font-medium">
-              Register before May 2026 and your first payment covers all of May and June events.
+              Join now through May 1st and get 2 months for the price of 1. Your next payment won’t begin until July 1st. Membership includes a 90-day commitment.
             </p>
           </div>
 

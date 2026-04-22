@@ -8,7 +8,7 @@ const eventTypes = [
   {
     icon: <Video />,
     title: 'Monthly Deep-Dive Call',
-    desc: 'A live, virtual group call with Jenn — included with every membership.',
+    desc: 'A live, virtual group call with Jenn, included with every membership.',
     chip: 'Virtual',
     color: 'magenta',
     image: '/assets/sisterhood-zoom.png',
@@ -31,7 +31,7 @@ const eventTypes = [
   },
   {
     icon: <MapPin />,
-    title: 'Southern Utah Summer Retreat',
+    title: 'Southern Utah Fall Retreat',
     desc: 'A transformational in-person experience. Extremely discounted for members.',
     chip: 'In-Person',
     color: 'orange',
@@ -61,7 +61,7 @@ export default function Events() {
             Where the <span className="font-serif italic text-sun">sisterhood</span> rises together.
           </h1>
           <p className="text-lg md:text-xl text-white/95 font-medium max-w-2xl mx-auto">
-            Primarily online, with select in-person moments that bring the community together.
+            Join from wherever you are, and step into connection, both online and in person as our community expands.
           </p>
         </div>
       </section>
@@ -75,7 +75,7 @@ export default function Events() {
               Full calendar <i className="text-pink">coming soon.</i>
             </h2>
             <p className="text-gray-600 text-lg md:text-xl font-medium max-w-2xl mx-auto mb-8">
-              The May and June event lineup is being finalized. Check back shortly — or reserve your spot now so you don’t miss a thing.
+              The May and June event lineup is being finalized. Check back shortly, or reserve your spot now so you don’t miss a thing.
             </p>
             <a
               href={CHECKOUT_URL}
@@ -141,20 +141,23 @@ export default function Events() {
           <div className="relative z-10 p-10 md:p-16 max-w-2xl">
             <MapPin size={40} className="text-sun mb-6" />
             <h2 className="text-4xl md:text-6xl font-display italic mb-4">
-              Summer Retreat
+              Fall Retreat
             </h2>
             <p className="text-sun text-sm font-bold uppercase tracking-widest mb-6">
               Southern Utah
             </p>
             <p className="text-white/95 text-lg font-medium leading-relaxed mb-8">
-              An exclusive, transformative in-person experience. Unplug, recharge, and energize your vibe under the desert sun.
+              An exclusive, transformative in-person experience. Unplug, recharge, and energize your vibe under the desert sun. Strictly for play, fun, laughter, connection &amp; relaxation.
             </p>
             <ul className="space-y-2 mb-8">
               <li className="flex items-center gap-3 font-bold">
                 <CheckCircle2 className="text-sun" size={20} /> Extremely discounted member rate
               </li>
               <li className="flex items-center gap-3 font-bold">
-                <CheckCircle2 className="text-sun" size={20} /> Limited spots available
+                <CheckCircle2 className="text-sun" size={20} /> Option to purchase coming soon
+              </li>
+              <li className="flex items-center gap-3 font-bold">
+                <CheckCircle2 className="text-sun" size={20} /> More details coming soon
               </li>
             </ul>
             <a

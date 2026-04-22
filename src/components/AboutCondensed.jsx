@@ -14,7 +14,7 @@ export default function AboutCondensed() {
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl border-4 border-sun">
               <img
                 src="/assets/jenn-headshot.png"
-                alt="Jenn — Founder of Energize Your Vibe"
+                alt="Jenn - Founder of Energize Your Vibe"
                 className="w-full h-full object-cover"
               />
               <div className="absolute bottom-6 left-6 bg-pink text-white px-6 py-3 rounded-xl font-display text-2xl shadow-lg">
@@ -28,14 +28,17 @@ export default function AboutCondensed() {
             </h2>
             <div className="space-y-5 text-gray-700 text-lg md:text-xl font-medium leading-relaxed">
               <p>
-                Jenn built Energize Your Vibe as a community for women — not networking. A place to be yourself and come as you are. For those who want more: consistent love, real growth, and the tools to support them in the basics of life.
+                Jenn built Energize Your Vibe as a space for women to gather, connect, and simply be. A place to come as you are without pressure or performance. A place where you’re seen for who you truly are. We want the heart of you!
               </p>
               <p>
                 This isn’t about fixing everything. It’s about meeting you where you are and offering tools that empower you to become your best self.
               </p>
+              <p className="font-bold text-magenta">
+                Because we care and want to see you WIN!
+              </p>
               <div className="bg-sun/40 p-6 rounded-2xl border border-gold/30 mt-6">
                 <p className="font-bold text-magenta italic">
-                  “The differentiator is that this is truly personal. We genuinely root for you — because we care.”
+                  “The differentiator is that this is truly personal. We genuinely root for you, because we care.”
                 </p>
               </div>
             </div>

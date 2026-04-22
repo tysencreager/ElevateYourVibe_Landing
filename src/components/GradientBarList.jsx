@@ -2,7 +2,7 @@ import React from 'react';
 
 /**
  * A stacked list of rows with soft horizontal gradient backgrounds
- * and subtle feathered edges — inspired by editorial "highlighter" bars.
+ * and subtle feathered edges, inspired by editorial "highlighter" bars.
  *
  * Each item: { icon?: ReactNode, text: string, accent?: 'sun'|'gold'|'orange'|'pink'|'magenta' }
  */

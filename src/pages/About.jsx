@@ -7,7 +7,7 @@ import { CHECKOUT_URL } from '../data/links.js';
 
 const quotes = [
   '“I want what’s introduced to speak to the soul.”',
-  '“It’s a community for women — not networking. A place where they can be themselves and come as they are.”',
+  '“A space for women to gather, connect, and simply be. A place to come as you are without pressure or performance.”',
   '“Not about fixing everything. Supporting people where they are and offering tools that empower them to become their best self.”',
   '“The differentiator is that this is truly personal. We genuinely root for you.”',
 ];
@@ -25,7 +25,7 @@ export default function About() {
               The heart behind <span className="font-serif italic text-gradient font-semibold">Energize Your Vibe.</span>
             </h1>
             <p className="text-lg md:text-xl text-magenta/90 font-medium leading-relaxed mb-6">
-              Jenn is the founder of Energize Your Vibe — a transformational global sisterhood rooted in self-love, confidence, and authentic connection. She built this community for women who want more: real tools, real support, and a place to simply be themselves.
+              Jenn is the founder of Energize Your Vibe - a transformational global sisterhood rooted in self-love, confidence, and authentic connection. She built this community for women who want more: real tools, real support, and a place to simply be themselves.
             </p>
             <a
               href={CHECKOUT_URL}
@@ -40,7 +40,7 @@ export default function About() {
             <div className="relative rounded-3xl overflow-hidden aspect-[3/4] max-w-sm w-full shadow-2xl border-4 border-white">
               <img
                 src="/assets/jenn-headshot.png"
-                alt="Jenn — Founder of Energize Your Vibe"
+                alt="Jenn - Founder of Energize Your Vibe"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -83,10 +83,10 @@ export default function About() {
           <div className="grid md:grid-cols-[1fr_minmax(260px,340px)] gap-10 lg:gap-16">
             <article className="space-y-6 text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
               <p className="first-letter:font-display first-letter:text-6xl first-letter:text-pink first-letter:float-left first-letter:mr-3 first-letter:leading-[0.85] first-letter:mt-1">
-                Jenn Davis is a certified Holistic Health Practitioner specializing in energy and wellness, trained in the energetics of the body and the subconscious. Her work blends science-backed coaching with deep emotional and energetic support — helping individuals regulate their nervous system, shift their mindset, and create lasting change from within.
+                Jenn Davis is a certified Holistic Health Practitioner specializing in energy and wellness, trained in the energetics of the body and the subconscious. Her work blends science-backed coaching with deep emotional and energetic support - helping individuals come back home to self and heart, regulate their nervous system, shift their mindset, and create lasting change from within.
               </p>
               <p>
-                Jenn has spent decades committed to personal growth, healing, and understanding what it truly means to live a fulfilling life. She is deeply passionate about supporting people in remembering who they are — that they matter, are seen, heard, and deeply loved. Creating space for others to experience peace, clarity, and genuine joy is not just her work, it is her life’s mission and passion.
+                Jenn has spent decades committed to personal growth, healing, and understanding what it truly means to live a fulfilling life. She is deeply passionate about supporting people in remembering who they are - that they matter, are seen, heard, and deeply loved. Creating space for others to experience peace, clarity, and genuine joy is not just her work, it is her life’s mission and passion.
               </p>
 
               <figure className="my-10 rounded-3xl overflow-hidden shadow-xl border border-white/40">
@@ -101,7 +101,7 @@ export default function About() {
               </figure>
 
               <p>
-                Her journey has been shaped by both profound love and deep loss. Widowed at the age of 22 and left to raise her young child, Jenn faced one of life’s most defining moments early on. In the midst of grief and uncertainty, she made a choice to keep going. That choice led her into years of self-development, faith, healing work, and deep inner exploration.
+                Her journey has been shaped by both profound love and deep loss. Widowed at the age of 22 and left to raise her young child, Jenn faced one of life’s most defining moments early on. In the midst of grief and uncertainty, she made a choice to keep going. That choice led her into years of self-development, faith, healing work, deep inner exploration, and surrendering to allow God to guide her efforts and create the miracles she desired.
               </p>
               <p>
                 Throughout her life, Jenn has also experienced the heartbreak of losing two of her childhood best friends to cancer, and has been impacted by the loss of loved ones through suicide. She has walked alongside friends and family members navigating mental health challenges and addiction, giving her a deep, personal understanding of the weight many people carry. These experiences have shaped her perspective, strengthening her compassion and reinforcing her belief in the importance of connection, support, and truly valuing life.
@@ -110,21 +110,21 @@ export default function About() {
               <blockquote className="relative my-10 pl-8 md:pl-10 py-6 border-l-4 border-pink bg-white/60 rounded-r-2xl">
                 <Quote className="absolute -top-3 -left-4 text-pink bg-white rounded-full p-1" size={32} />
                 <p className="font-display italic text-2xl md:text-3xl text-magenta leading-snug">
-                  She didn’t just learn the work — she embodied it, and continues to do so.
+                  She didn’t just learn the work. She lives it and continues to embody it. No one is exempt &amp; there’s no way around it. We are all human.
                 </p>
               </blockquote>
 
               <p>
-                Later in life, as unresolved trauma and grief surfaced, Jenn experienced another layer of transformation. What once felt light became heavy. Instead of turning away, she leaned in. Through emotional healing, mindset work, nervous system regulation, and a deep reliance on her faith in God, she found her way back to herself. She values practicing what she preaches, in life and with clients. She won’t tell you what you want to hear — she will share truth, and respects when she is treated the same. Communication and willingness are key.
+                Later in life, as unresolved trauma and grief surfaced, Jenn experienced another layer of transformation. What once felt light became heavy. Instead of turning away, she leaned in. Through emotional healing, mindset work, nervous system regulation, and a deep reliance on her faith in God, she found her way back to herself. She values practicing what she preaches, in life and with clients. She won’t tell you what you want to hear - she will share truth, and respects when she is treated the same. Communication and willingness are key.
               </p>
               <p>
-                Today, Jenn lives with a grounded sense of inner peace, love, and alignment. She brings real-life experience, compassion, and clarity into every space she holds. She sees people for who they are and meets them where they are, while also guiding them forward. She thrives using her cheerleading super powers — experiencing pure joy for herself and witnessing it in others.
+                Today, Jenn lives with a grounded sense of inner peace, love, and alignment. She brings real-life experience, compassion, and clarity into every space she holds. She sees people for who they are and meets them where they are, while also guiding them forward. She thrives using her cheerleading super powers - experiencing pure joy for herself and witnessing it in others.
               </p>
               <p>
                 Jenn is deeply rooted in her relationship with God and her Savior. While this is central to her life, she honors and respects each individual’s beliefs and personal journey. She believes love is the foundation of healing, and values the unique light within every person.
               </p>
               <p>
-                She has been married to her sweetheart for 24 years and is the proud mother of three adult children. Originally from Washington State, she has called Utah home for the past 20 years — she loves Utah and its seasons, the mountains, water, and adventure.
+                She has been married to her sweetheart going on 24 years. She is grateful to have found love again, after such a loss, and can testify that anything is possible. She is the proud mother of 3 adult children (her baby just turned 18 and is graduating HS - talk about new bittersweet chapters!). Originally from Washington State, she has called Utah home for the past 20 years - she loves Utah and its seasons, the mountains, water, and adventure.
               </p>
             </article>
 
@@ -163,7 +163,7 @@ export default function About() {
             </aside>
           </div>
 
-          {/* VISION CARD — photo left, text right */}
+          {/* VISION CARD - photo left, text right */}
           <div className="relative mt-16 rounded-3xl overflow-hidden shadow-2xl border border-white/40 grid md:grid-cols-[1fr_1.1fr]">
             {/* Photo side */}
             <div className="relative min-h-[320px] md:min-h-[600px]">
@@ -190,17 +190,17 @@ export default function About() {
                   The Vision
                 </p>
                 <h3 className="font-display text-3xl sm:text-4xl md:text-5xl mb-5 md:mb-6 leading-[1.05]">
-                  More than a program — <i className="text-sun">a movement.</i>
+                  More than a program - <i className="text-sun">a movement.</i>
                 </h3>
                 <div className="space-y-4 text-base md:text-lg font-medium leading-relaxed text-white/95 mb-8">
                   <p>
-                    Energize Your Vibe was born through inspiration and lived experience — a space where women come as they are, are supported, grow, and rise.
+                    Energize Your Vibe was born through inspiration and lived experience - a space where women come as they are, are supported, grow, and rise.
                   </p>
                   <p>
-                    Healing and fulfillment come through shared experiences — gathering, playing, laughing, learning, and truly living life together.
+                    Healing and fulfillment come through shared experiences - gathering, playing, laughing, learning, and truly living life together.
                   </p>
                   <p>
-                    A community built on intention. Not a space for gossip, blame, or staying stuck — a space for support, empowerment, accountability, and real transformation.
+                    A community built on intention. Not a space for gossip, blame, or staying stuck - a space for support, empowerment, accountability, and real transformation.
                   </p>
                 </div>
                 <div className="pt-6 border-t border-white/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
@@ -297,7 +297,7 @@ export default function About() {
               Why a <i className="text-pink">framework</i> works.
             </h2>
             <p className="text-gray-600 text-lg md:text-xl font-medium max-w-3xl mx-auto">
-              Because everything in life is connected. No area of your life operates on its own — and when one pillar is supported, the others begin to shift too.
+              Because everything in life is connected. No area of your life operates on its own - and when one pillar is supported, the others begin to shift too.
             </p>
           </div>
 
@@ -306,7 +306,7 @@ export default function About() {
               {
                 eyebrow: 'Awareness',
                 title: 'See it clearly.',
-                desc: 'Most people feel off but don’t know why. The pillars help you name it — so you can do something about it.',
+                desc: 'Most people feel off but don’t know why. The pillars help you name it - so you can do something about it.',
                 gradient:
                   'linear-gradient(90deg, rgba(253,224,139,0.95) 0%, rgba(248,162,50,0.9) 55%, rgba(242,107,56,0.85) 100%)',
               },
@@ -320,7 +320,7 @@ export default function About() {
               {
                 eyebrow: 'Momentum',
                 title: 'Support one, shift them all.',
-                desc: 'Poor sleep affects your mood. Relationship stress affects your decisions. Everything is connected — and the pillars move with you.',
+                desc: 'Poor sleep affects your mood. Relationship stress affects your decisions. Everything is connected - and the pillars move with you.',
                 gradient:
                   'linear-gradient(90deg, rgba(242,107,56,0.92) 0%, rgba(226,46,100,0.95) 55%, rgba(183,21,86,0.9) 100%)',
               },

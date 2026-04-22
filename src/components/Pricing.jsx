@@ -5,16 +5,16 @@ import { CHECKOUT_URL } from '../data/links.js';
 
 const perks = [
   {
-    bold: 'Grandfathered pricing:',
-    text: 'First 50 members lock in $88/mo for a full year.',
+    bold: 'Lifetime pricing:',
+    text: 'First 50 members lock in $88/mo for life.',
   },
   {
     bold: 'Full access:',
-    text: 'Library, daily lives, podcasts, meditations, method & community.',
+    text: 'Library, daily lives, podcasts, meditations, method & community, weekly texts, 7 Pillar growth calls.',
   },
   {
     bold: 'A cheerleader in your pocket:',
-    text: 'Opt-in inspiration tailored to you.',
+    text: 'Opt-in inspiration tailored to you, we gotchu, girl!',
   },
   {
     bold: 'Welcome gift:',
@@ -22,11 +22,11 @@ const perks = [
   },
   {
     bold: 'Events included:',
-    text: 'Monthly call, soundbaths, launch party & select gatherings.',
+    text: 'Monthly deep-dive call with Jenn, 7 Pillar growth calls with expert coaches, daily Lives for Vibes, weekly uplifting texts, soundbaths, launch party & select gatherings.',
   },
   {
     bold: 'Retreat discount:',
-    text: 'Extremely discounted rate for the Southern Utah summer retreat.',
+    text: 'Extremely discounted rate for the Southern Utah fall retreat. This is a thank you to the community and will never be offered this low again. The retreat is strictly for play, fun, laughter, connection & relaxation.',
   },
 ];
 
@@ -99,10 +99,13 @@ export default function Pricing() {
             Reserve Your Spot Now
           </a>
 
-          <div className="text-center">
+          <div className="text-center space-y-3">
             <p className="inline-flex items-center gap-3 text-magenta text-sm font-bold bg-magenta/5 px-5 py-3 rounded-full border border-magenta/15">
-              <span className="uppercase tracking-[0.2em] text-[10px] bg-magenta text-sun px-2 py-0.5 rounded-full">Bonus</span>
-              <span>Register before May 2026 — first payment covers May AND June events.</span>
+              <span className="uppercase tracking-[0.2em] text-[10px] bg-magenta text-sun px-2 py-0.5 rounded-full">Beta Vibe Pricing</span>
+              <span>Join now through May 1st and get 2 months for the price of 1. Your next payment won’t begin until July 1st.</span>
+            </p>
+            <p className="text-gray-600 text-sm font-medium max-w-xl mx-auto">
+              Membership includes a 90-day commitment. May and June are combined as your first month so you can fully experience the community, build consistency, and create real connection.
             </p>
           </div>
         </div>

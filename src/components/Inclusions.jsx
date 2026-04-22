@@ -3,6 +3,8 @@ import {
   Heart,
   Users,
   MessageCircleHeart,
+  MessageSquareText,
+  Sparkles,
   Map,
   Headphones,
   Sun,
@@ -17,16 +19,18 @@ import { CHECKOUT_URL } from '../data/links.js';
 
 const itemsLeft = [
   { icon: <Video />, text: "Daily 'Lives for Vibes'", accent: 'sun' },
-  { icon: <Heart />, text: 'Cheerleader in your pocket', accent: 'gold' },
-  { icon: <Users />, text: 'Monthly Group Call with Jenn', accent: 'orange' },
-  { icon: <MessageCircleHeart />, text: 'Private Facebook Community', accent: 'pink' },
+  { icon: <Users />, text: 'Monthly Group Call with Jenn', accent: 'gold' },
+  { icon: <Sparkles />, text: 'Monthly 7 Pillar support and growth calls with Energize Your Vibe expert coaches (join as needed)', accent: 'orange' },
+  { icon: <MessageSquareText />, text: 'Texts: Stay connected with uplifting texts during the week, filled with inspiration, motivation, self-love reminders, and simple ways to take action.', accent: 'pink' },
+  { icon: <Heart />, text: 'Cheerleader in your pocket', accent: 'magenta' },
 ];
 
 const itemsRight = [
   { icon: <Map />, text: 'The Energize Your Vibe Method + Roadmap', accent: 'sun' },
   { icon: <Headphones />, text: 'Podcasts, Meditations & Spotify Playlist', accent: 'gold' },
   { icon: <Sun />, text: 'Affirmations & Vibe Checks', accent: 'orange' },
-  { icon: <Gift />, text: 'Personalized Welcome Gift in the Mail', accent: 'pink' },
+  { icon: <MessageCircleHeart />, text: 'Private Facebook Community', accent: 'pink' },
+  { icon: <Gift />, text: 'Personalized Welcome Gift in the Mail', accent: 'magenta' },
 ];
 
 export default function Inclusions() {
@@ -69,7 +73,7 @@ export default function Inclusions() {
                 A room full of women rooting for you.
               </h3>
               <p className="text-white/95 font-medium text-base md:text-lg max-w-md drop-shadow">
-                Connection, creativity, and wellness — shared openly, without comparison.
+                Connection, creativity, and wellness, shared openly, without comparison.
               </p>
             </div>
           </div>
@@ -102,9 +106,9 @@ export default function Inclusions() {
               <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-orange mb-2">
                 A Personal Touch
               </p>
-              <h3 className="font-display text-2xl text-gray-900 mb-1">Tools you can hold.</h3>
+              <h3 className="font-display text-2xl text-gray-900 mb-1">A little surprise to brighten your day.</h3>
               <p className="text-gray-600 font-medium">
-                Every member receives a personalized gift in the mail — because this community is truly personal.
+                Each member receives a personalized gift in the mail when they sign up. Because being part of this should feel fun, thoughtful, and a little (or a lot) spoiling.
               </p>
             </div>
           </div>
@@ -115,13 +119,13 @@ export default function Inclusions() {
             </div>
             <div>
               <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-pink mb-2">
-                Tailored To You
+                Tailored For You
               </p>
               <h3 className="font-display text-2xl text-gray-900 mb-1">
                 Opt-in inspiration, made for you.
               </h3>
               <p className="text-gray-600 font-medium">
-                Choose the motivational communications that actually speak to where you are.
+                Choose the support that resonates with your heart, where you are and where you’re going.
               </p>
             </div>
           </div>
@@ -140,7 +144,7 @@ export default function Inclusions() {
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-pink animate-pulse" />
             <span className="uppercase tracking-[0.2em] text-xs">Now Open</span>
             <span className="text-pink/40">|</span>
-            <span>First 50 members only.</span>
+            <span>First 50 members lock in $88/mo for life.</span>
           </p>
         </div>
       </div>
