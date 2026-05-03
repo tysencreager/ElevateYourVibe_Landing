@@ -2,14 +2,7 @@ import { useState } from 'react';
 import { ArrowRight, CheckCircle2, Mail, Phone, User, Sparkles } from 'lucide-react';
 import Blob from '../components/Blob.jsx';
 import Sunburst from '../components/Sunburst.jsx';
-import { CHECKOUT_URL } from '../data/links.js';
-
-const FORM_NAME = 'membership-waitlist';
-
-const encode = (data) =>
-  Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
+import { CHECKOUT_URL, WAITLIST_FORM_ENDPOINT } from '../data/links.js';
 
 const initialForm = {
   firstName: '',
@@ -34,14 +27,13 @@ export default function Membership() {
     setStatus('submitting');
     setErrorMessage('');
     try {
-      const response = await fetch('/', {
+      const response = await fetch(WAITLIST_FORM_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': FORM_NAME,
-          'bot-field': '',
-          ...form,
-        }),
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(form),
       });
       if (!response.ok) {
         throw new Error('Form submission failed');
@@ -121,24 +113,7 @@ export default function Membership() {
                   </p>
                 </div>
 
-                <form
-                  name={FORM_NAME}
-                  method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                  onSubmit={handleSubmit}
-                  className="space-y-5"
-                  noValidate
-                >
-                  {/* Hidden honeypot for bots */}
-                  <p className="hidden">
-                    <label>
-                      Don’t fill this out if you’re human:{' '}
-                      <input name="bot-field" tabIndex="-1" autoComplete="off" />
-                    </label>
-                  </p>
-                  <input type="hidden" name="form-name" value={FORM_NAME} />
-
+                <form onSubmit={handleSubmit} className="space-y-5" noValidate>
                   <div className="grid sm:grid-cols-2 gap-5">
                     <Field
                       icon={<User size={18} strokeWidth={1.5} />}
