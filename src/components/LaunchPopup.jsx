@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { X, ArrowRight, Calendar } from 'lucide-react';
 import Sunburst from './Sunburst.jsx';
-import { CHECKOUT_URL } from '../data/links.js';
 
 const STORAGE_KEY = 'eyv-launch-popup-dismissed-v1';
 const OPEN_DELAY_MS = 900;
@@ -113,15 +113,13 @@ export default function LaunchPopup() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
-            <a
-              href={CHECKOUT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/membership"
               onClick={handleCta}
               className="w-full sm:w-auto bg-sun text-magenta font-bold uppercase tracking-widest text-xs sm:text-sm py-3.5 px-7 rounded-full hover:bg-white transition-colors shadow-lg inline-flex items-center justify-center gap-2"
             >
               Reserve My Spot <ArrowRight size={16} strokeWidth={1.75} />
-            </a>
+            </Link>
             <button
               type="button"
               onClick={close}

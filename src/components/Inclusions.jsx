@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   Video,
   Heart,
@@ -15,7 +16,6 @@ import {
 import Blob from './Blob.jsx';
 import GradientBarList from './GradientBarList.jsx';
 import Reveal from './Reveal.jsx';
-import { CHECKOUT_URL } from '../data/links.js';
 
 const itemsLeft = [
   { icon: <Video />, text: "Daily 'Lives for Vibes'", accent: 'sun' },
@@ -132,14 +132,12 @@ export default function Inclusions() {
         </div>
 
         <div className="flex flex-col items-center">
-          <a
-            href={CHECKOUT_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/membership"
             className="bg-brand-gradient text-white py-5 px-12 rounded-full font-bold uppercase tracking-widest text-lg shadow-[0_10px_30px_rgba(242,107,56,0.4)] hover:shadow-[0_15px_40px_rgba(242,107,56,0.6)] transition-all hover:-translate-y-1 flex items-center gap-3"
           >
             Secure Your Membership <ArrowRight size={20} />
-          </a>
+          </Link>
           <p className="mt-6 inline-flex items-center gap-3 text-pink font-bold text-sm md:text-base bg-pink/10 px-6 py-2.5 rounded-full border border-pink/20">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-pink animate-pulse" />
             <span className="uppercase tracking-[0.2em] text-xs">Now Open</span>
