@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { X, ArrowRight, Calendar } from 'lucide-react';
 import Sunburst from './Sunburst.jsx';
-import { CHECKOUT_URL } from '../data/links.js';
 
 const STORAGE_KEY = 'eyv-launch-popup-dismissed-v1';
 const OPEN_DELAY_MS = 900;
@@ -89,7 +89,7 @@ export default function LaunchPopup() {
         <div className="relative z-10 p-7 sm:p-10 text-white text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 border border-white/30 backdrop-blur-md text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] mb-5">
             <Calendar size={12} strokeWidth={1.75} className="text-sun" />
-            Launching May 2026
+            Launching June 1, 2026
           </div>
 
           <h2
@@ -100,7 +100,7 @@ export default function LaunchPopup() {
           </h2>
 
           <p className="text-white/95 text-sm sm:text-base font-medium leading-relaxed mb-6">
-            Energize Your Vibe opens its doors in <span className="font-bold text-sun">May 2026</span>. The first 50 members lock in the introductory <span className="font-bold text-sun">$88/mo</span> Beta Vibe rate <span className="font-bold text-sun">for life</span>. Once those spots are gone, pricing goes up.
+            Energize Your Vibe officially launches <span className="font-bold text-sun">June 1, 2026</span>, with membership signup opening <span className="font-bold text-sun">May 18, 2026</span>. The first 50 members lock in the introductory <span className="font-bold text-sun">$88/mo</span> Beta Vibe rate <span className="font-bold text-sun">for life</span>. Once those spots are gone, pricing goes up.
           </p>
 
           <div className="bg-white/10 border border-white/25 rounded-2xl px-5 py-4 mb-7 backdrop-blur-sm">
@@ -108,20 +108,18 @@ export default function LaunchPopup() {
               Beta Vibe Pricing
             </p>
             <p className="text-sm sm:text-base font-medium">
-              Join now through May 1st and get 2 months for the price of 1. Your next payment won’t begin until July 1st. Membership includes a 90-day commitment.
+              Sign up between May 18 and June 1, 2026 and get 2 months for the price of 1. Your next payment won’t begin until August 1, 2026. Membership includes a 90-day commitment.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
-            <a
-              href={CHECKOUT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/membership"
               onClick={handleCta}
               className="w-full sm:w-auto bg-sun text-magenta font-bold uppercase tracking-widest text-xs sm:text-sm py-3.5 px-7 rounded-full hover:bg-white transition-colors shadow-lg inline-flex items-center justify-center gap-2"
             >
               Reserve My Spot <ArrowRight size={16} strokeWidth={1.75} />
-            </a>
+            </Link>
             <button
               type="button"
               onClick={close}

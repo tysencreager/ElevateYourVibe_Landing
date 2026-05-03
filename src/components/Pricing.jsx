@@ -1,7 +1,7 @@
+import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
 import Blob from './Blob.jsx';
 import Sunburst from './Sunburst.jsx';
-import { CHECKOUT_URL } from '../data/links.js';
 
 const perks = [
   {
@@ -90,19 +90,17 @@ export default function Pricing() {
             </p>
           </div>
 
-          <a
-            href={CHECKOUT_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/membership"
             className="block text-center w-full bg-pink text-white py-5 md:py-6 px-8 rounded-full font-bold uppercase tracking-widest text-lg md:text-xl hover:bg-magenta transition-colors shadow-[0_10px_30px_rgba(226,46,100,0.35)] mb-6"
           >
             Reserve Your Spot Now
-          </a>
+          </Link>
 
           <div className="text-center space-y-3">
             <p className="inline-flex items-center gap-3 text-magenta text-sm font-bold bg-magenta/5 px-5 py-3 rounded-full border border-magenta/15">
               <span className="uppercase tracking-[0.2em] text-[10px] bg-magenta text-sun px-2 py-0.5 rounded-full">Beta Vibe Pricing</span>
-              <span>Join now through May 1st and get 2 months for the price of 1. Your next payment won’t begin until July 1st.</span>
+              <span>Sign up between May 18 and June 1, 2026 and get 2 months for the price of 1. Your next payment won’t begin until August 1, 2026.</span>
             </p>
             <p className="text-gray-600 text-sm font-medium max-w-xl mx-auto">
               Membership includes a 90-day commitment. May and June are combined as your first month so you can fully experience the community, build consistency, and create real connection.
