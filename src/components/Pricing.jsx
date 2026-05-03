@@ -100,7 +100,7 @@ export default function Pricing() {
           <div className="text-center space-y-3">
             <p className="inline-flex items-center gap-3 text-magenta text-sm font-bold bg-magenta/5 px-5 py-3 rounded-full border border-magenta/15">
               <span className="uppercase tracking-[0.2em] text-[10px] bg-magenta text-sun px-2 py-0.5 rounded-full">Beta Vibe Pricing</span>
-              <span>Join now through May 1st and get 2 months for the price of 1. Your next payment won’t begin until July 1st.</span>
+              <span>Sign up between May 18 and June 1, 2026 and get 2 months for the price of 1. Your next payment won’t begin until August 1, 2026.</span>
             </p>
             <p className="text-gray-600 text-sm font-medium max-w-xl mx-auto">
               Membership includes a 90-day commitment. May and June are combined as your first month so you can fully experience the community, build consistency, and create real connection.
